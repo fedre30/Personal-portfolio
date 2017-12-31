@@ -1,0 +1,468 @@
+// COLORS
+$brey : #394047
+$mustard: #D0A233
+$ivory: #DCC7A9
+$lightgrey: rgba(176, 188, 196, 0.6)
+$tagOpacity : 0.7
+
+//FONTS
+$abril : 'Abril Fatface', regular
+$bitter : 'Bitter', serif
+
+$sectionTitle: 5vw
+
+
+
+
+body
+  background-color: $brey
+
+a
+  text-decoration: none
+
+
+.scrollTarget
+  --currentSection: 0
+  margin-top: calc(-100vh * var(--currentSection))
+  transition: margin-top 0.5s ease
+
+// INTRODUCTION
+
+.introduction
+  width: 100%
+  height: 100vh
+  text-align: center
+  position: relative
+  margin-bottom: 10vh
+
+
+
+.backgroundImage
+  width: 100vw
+  max-height: 90vh
+
+
+  img
+    width: 80%
+
+
+.scrollAction
+  width: 5vw
+  margin: 0 auto
+
+
+
+  .scroll
+    text-transform: uppercase
+    font-family: $bitter
+    font-size: 1vw
+    display: inline-block
+
+
+    a
+      color: white
+
+
+  .scrollImage
+    width: 1vw
+
+
+/* Mobile */
+@media (max-width: 400px)
+  .introduction
+    margin: 0
+    height: 35vh
+
+@media (min-width: 401px)
+
+/* Larger than phablet (also point when grid becomes active) */
+@media (min-width: 550px)
+
+/* Larger than tablet */
+@media (min-width: 750px)
+
+/* Larger than desktop */
+@media (min-width: 1000px)
+
+/* Larger than Desktop HD */
+@media (min-width: 1200px)
+
+
+
+// WORKFLOW
+
+#workflow
+  width: 100vw
+  height: 100vh
+
+
+.sectionTitle
+  width: 100%
+  text-align: center
+
+
+
+
+  .sectionImage
+    width: 5vw
+    text-align: center
+
+  h3
+    color: white
+    font-family: $abril
+    font-size: $sectionTitle
+    display: inline-block
+
+
+.subtitle
+  font-family: $bitter
+  font-style: italic
+  color: $ivory
+  margin: 4vh
+  text-align: center
+
+  h5
+    font-size: 2vw
+
+
+
+.phaseTitle
+  font-family: $bitter
+  font-weight: 700
+  letter-spacing: 0.09vw
+  color: white
+  font-size: 1vw
+  text-align: center
+
+.phaseParagraph
+  font-family: $bitter
+  color: $ivory
+  font-size: 0.8vw
+  font-weight: 400
+  margin-top: 5vh
+
+
+
+.row img
+  width: 100%
+
+
+/* Mobile */
+@media (max-width: 400px)
+
+  .workflow
+    margin: 0
+
+  .phaseTitle
+    font-size: 2vw
+
+  .phaseParagraph
+    font-size: 1.5vw
+
+@media (min-width: 401px)
+
+/* Larger than phablet (also point when grid becomes active) */
+@media (min-width: 550px)
+
+/* Larger than tablet */
+@media (min-width: 750px)
+
+/* Larger than desktop */
+@media (min-width: 1000px)
+
+/* Larger than Desktop HD */
+@media (min-width: 1200px)
+
+
+
+// PROJECTS
+
+.projects
+  margin-top: 20vh
+
+.sectionTitleProjects
+  width: 100%
+  text-align: center
+  margin-bottom: 20vh
+
+
+
+  .sectionImage
+    width: 5vw
+    text-align: center
+
+  h3
+    color: white
+    font-family: $abril
+    font-size: $sectionTitle
+    display: inline-block
+
+
+
+// PROJECT 1
+
+.project-1
+  height: 80vh
+  position: relative
+
+.rectangle-1
+  width: 85vw
+  height: 35vh
+  background-color: $lightgrey
+
+
+.imageProject
+  width: 30vw
+  position: absolute
+  top: -10vh
+  left: 5vw
+
+  img
+    width: 100%
+
+.projectTitle
+  width: 50vw
+  font-family: $abril
+  font-size: 5vw
+  color: $mustard
+  position: absolute
+  top: -8vh
+  left: 60vw
+  //TODO BOX SHADOW
+
+.tagsContainer
+  position: absolute
+  top: 5vh
+  left: 38vw
+.tag
+  display: inline-block
+  width: 7vw
+  height: 3vh
+  background-color: $brey
+  color: white
+  font-family: $bitter
+  font-size: 0.9vw
+  text-align: center
+  padding-top: 0.7vh
+  border-radius: 0.5vw
+  opacity: $tagOpacity
+
+
+.projectParagraph
+  font-family: $bitter
+  font-size: 1vw
+  color: white
+  width: 40vw
+  position: absolute
+  top: 15vh
+  left: 38vw
+
+.phases
+  margin-top: 10vh
+
+  .phaseParagraph
+    width: 20vw
+
+.phaseTitle-project
+  font-family: $bitter
+  font-size: 2vw
+  color: $mustard
+  text-align: center
+
+.dot
+  color: $ivory
+
+@media (max-width: 400px)
+  
+@media (min-width: 401px)
+
+/* Larger than phablet (also point when grid becomes active) */
+@media (min-width: 550px)
+
+/* Larger than tablet */
+@media (min-width: 750px)
+
+/* Larger than desktop */
+@media (min-width: 1000px)
+
+/* Larger than Desktop HD */
+@media (min-width: 1200px)
+
+
+
+//PROJECT 2
+
+.project2
+  height: 100vh
+  width: 100vw
+
+
+.projectShowcase
+  position: relative
+  height: 40vh
+  clear: both
+
+
+.rectangle-2
+  background-color: $ivory
+  width: 85vw
+  height: 35vh
+  position: absolute
+  right: 0
+
+.imageProject2
+  width: 30vw
+  position: absolute
+  right: 7vw
+  top: -5vh
+
+  img
+    width: 100%
+
+.projectTitle2
+  font-family: $abril
+  font-size: 5vw
+  color: white
+  position: absolute
+  left: 20vw
+  top: -7vh
+
+.tagsContainer2
+  position: absolute
+  left: 45vw
+  top: 5vh
+
+.projectParagraph2
+  font-family: $bitter
+  font-size: 1vw
+  color: white
+  width: 40vw
+  position: absolute
+  left: 20vw
+  top: 15vh
+
+//PROJECT 3
+
+.project3
+  height: 90vh
+
+.projectTitle3
+  width: 50vw
+  font-family: $abril
+  font-size: 5vw
+  color: $mustard
+  position: absolute
+  top: -8vh
+  left: 38vw
+
+
+// ABOUT
+
+.about
+  height: 100vh
+
+.bioSection
+  position: relative
+  height: 100vh
+
+
+.aboutTitle
+  margin-bottom: 10vh
+
+.bioImage
+  width: 80vw
+  height: auto
+  position: absolute
+  right: -2vw
+
+  img
+    width: 100%
+
+.bioText
+  width: 30vw
+  position: absolute
+  font-family: $bitter
+  font-size: 1vw
+  left: 66vw
+  top: 15vh
+
+.bold
+  font-weight: bold
+
+.highlight
+  margin-top: 20vh
+  color: $mustard
+  font-weight: bold
+
+
+// CONTACTS
+
+.contacts
+  height: 70vh
+  margin-bottom: 20vh
+
+.contactsTitle
+  margin-bottom: 15vh
+
+.icon
+  max-width: 10vw
+  img
+    width: 20%
+
+
+input
+  height: 3vh
+  border-bottom: 1px solid $mustard
+  background-color: transparent
+  border-top: none
+  border-right: none
+  border-left: none
+  font-family: $bitter
+  font-size: 0.8vw
+
+input:focus
+  border-bottom: 2px solid $mustard
+  outline: none
+  color: white
+
+
+
+.message
+  margin: 4vh 0
+  height: 10vh
+  border: 1px solid $mustard
+  border-radius: 3px
+  background-color: transparent
+  max-width: 38vw
+  font-family: $bitter
+  font-size: 0.8vw
+
+.message:focus
+  border: 2px solid $mustard
+  outline: none
+  color: white
+
+footer p
+  text-align: center
+  color: $ivory
+  font-family: $bitter
+
+
+// RESPONSIVE
+
+/* Mobile */
+@media (max-width: 400px)
+
+@media (min-width: 401px)
+
+/* Larger than phablet (also point when grid becomes active) */
+@media (min-width: 550px)
+
+/* Larger than tablet */
+@media (min-width: 750px)
+
+/* Larger than desktop */
+@media (min-width: 1000px)
+
+/* Larger than Desktop HD */
+@media (min-width: 1200px)

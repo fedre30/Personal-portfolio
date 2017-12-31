@@ -1,0 +1,336 @@
+body {
+  background-color: #394047; }
+
+a {
+  text-decoration: none; }
+
+.scrollTarget {
+  --currentSection: 0;
+  margin-top: calc(-100vh * var(--currentSection));
+  transition: margin-top 0.5s ease; }
+
+.introduction {
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+  position: relative;
+  margin-bottom: 10vh; }
+
+.backgroundImage {
+  width: 100vw;
+  max-height: 90vh; }
+  .backgroundImage img {
+    width: 80%; }
+
+.scrollAction {
+  width: 5vw;
+  margin: 0 auto; }
+  .scrollAction .scroll {
+    text-transform: uppercase;
+    font-family: "Bitter", serif;
+    font-size: 1vw;
+    display: inline-block; }
+    .scrollAction .scroll a {
+      color: white; }
+  .scrollAction .scrollImage {
+    width: 1vw; }
+
+/* Mobile */
+@media (max-width: 400px) {
+  .introduction {
+    margin: 0;
+    height: 35vh; } }
+/* Larger than phablet (also point when grid becomes active) */
+/* Larger than tablet */
+/* Larger than desktop */
+/* Larger than Desktop HD */
+#workflow {
+  width: 100vw;
+  height: 100vh; }
+
+.sectionTitle {
+  width: 100%;
+  text-align: center; }
+  .sectionTitle .sectionImage {
+    width: 5vw;
+    text-align: center; }
+  .sectionTitle h3 {
+    color: white;
+    font-family: "Abril Fatface", regular;
+    font-size: 5vw;
+    display: inline-block; }
+
+.subtitle {
+  font-family: "Bitter", serif;
+  font-style: italic;
+  color: #DCC7A9;
+  margin: 4vh;
+  text-align: center; }
+  .subtitle h5 {
+    font-size: 2vw; }
+
+.phaseTitle {
+  font-family: "Bitter", serif;
+  font-weight: 700;
+  letter-spacing: 0.09vw;
+  color: white;
+  font-size: 1vw;
+  text-align: center; }
+
+.phaseParagraph {
+  font-family: "Bitter", serif;
+  color: #DCC7A9;
+  font-size: 0.8vw;
+  font-weight: 400;
+  margin-top: 5vh; }
+
+.row img {
+  width: 100%; }
+
+/* Mobile */
+@media (max-width: 400px) {
+  .workflow {
+    margin: 0; }
+
+  .phaseTitle {
+    font-size: 2vw; }
+
+  .phaseParagraph {
+    font-size: 1.5vw; } }
+/* Larger than phablet (also point when grid becomes active) */
+/* Larger than tablet */
+/* Larger than desktop */
+/* Larger than Desktop HD */
+.projects {
+  margin-top: 20vh; }
+
+.sectionTitleProjects {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 20vh; }
+  .sectionTitleProjects .sectionImage {
+    width: 5vw;
+    text-align: center; }
+  .sectionTitleProjects h3 {
+    color: white;
+    font-family: "Abril Fatface", regular;
+    font-size: 5vw;
+    display: inline-block; }
+
+.project-1 {
+  height: 80vh;
+  position: relative; }
+
+.rectangle-1 {
+  width: 85vw;
+  height: 35vh;
+  background-color: rgba(176, 188, 196, 0.6); }
+
+.imageProject {
+  width: 30vw;
+  position: absolute;
+  top: -10vh;
+  left: 5vw; }
+  .imageProject img {
+    width: 100%; }
+
+.projectTitle {
+  width: 50vw;
+  font-family: "Abril Fatface", regular;
+  font-size: 5vw;
+  color: #D0A233;
+  position: absolute;
+  top: -8vh;
+  left: 60vw; }
+
+.tagsContainer {
+  position: absolute;
+  top: 5vh;
+  left: 38vw; }
+
+.tag {
+  display: inline-block;
+  width: 7vw;
+  height: 3vh;
+  background-color: #394047;
+  color: white;
+  font-family: "Bitter", serif;
+  font-size: 0.9vw;
+  text-align: center;
+  padding-top: 0.7vh;
+  border-radius: 0.5vw;
+  opacity: 0.7; }
+
+.projectParagraph {
+  font-family: "Bitter", serif;
+  font-size: 1vw;
+  color: white;
+  width: 40vw;
+  position: absolute;
+  top: 15vh;
+  left: 38vw; }
+
+.phases {
+  margin-top: 10vh; }
+  .phases .phaseParagraph {
+    width: 20vw; }
+
+.phaseTitle-project {
+  font-family: "Bitter", serif;
+  font-size: 2vw;
+  color: #D0A233;
+  text-align: center; }
+
+.dot {
+  color: #DCC7A9; }
+
+/* Larger than phablet (also point when grid becomes active) */
+/* Larger than tablet */
+/* Larger than desktop */
+/* Larger than Desktop HD */
+.project2 {
+  height: 100vh;
+  width: 100vw; }
+
+.projectShowcase {
+  position: relative;
+  height: 40vh;
+  clear: both; }
+
+.rectangle-2 {
+  background-color: #DCC7A9;
+  width: 85vw;
+  height: 35vh;
+  position: absolute;
+  right: 0; }
+
+.imageProject2 {
+  width: 30vw;
+  position: absolute;
+  right: 7vw;
+  top: -5vh; }
+  .imageProject2 img {
+    width: 100%; }
+
+.projectTitle2 {
+  font-family: "Abril Fatface", regular;
+  font-size: 5vw;
+  color: white;
+  position: absolute;
+  left: 20vw;
+  top: -7vh; }
+
+.tagsContainer2 {
+  position: absolute;
+  left: 45vw;
+  top: 5vh; }
+
+.projectParagraph2 {
+  font-family: "Bitter", serif;
+  font-size: 1vw;
+  color: white;
+  width: 40vw;
+  position: absolute;
+  left: 20vw;
+  top: 15vh; }
+
+.project3 {
+  height: 90vh; }
+
+.projectTitle3 {
+  width: 50vw;
+  font-family: "Abril Fatface", regular;
+  font-size: 5vw;
+  color: #D0A233;
+  position: absolute;
+  top: -8vh;
+  left: 38vw; }
+
+.about {
+  height: 100vh; }
+
+.bioSection {
+  position: relative;
+  height: 100vh; }
+
+.aboutTitle {
+  margin-bottom: 10vh; }
+
+.bioImage {
+  width: 80vw;
+  height: auto;
+  position: absolute;
+  right: -2vw; }
+  .bioImage img {
+    width: 100%; }
+
+.bioText {
+  width: 30vw;
+  position: absolute;
+  font-family: "Bitter", serif;
+  font-size: 1vw;
+  left: 66vw;
+  top: 15vh; }
+
+.bold {
+  font-weight: bold; }
+
+.highlight {
+  margin-top: 20vh;
+  color: #D0A233;
+  font-weight: bold; }
+
+.contacts {
+  height: 70vh;
+  margin-bottom: 20vh; }
+
+.contactsTitle {
+  margin-bottom: 15vh; }
+
+.icon {
+  max-width: 10vw; }
+  .icon img {
+    width: 20%; }
+
+input {
+  height: 3vh;
+  border-bottom: 1px solid #D0A233;
+  background-color: transparent;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  font-family: "Bitter", serif;
+  font-size: 0.8vw; }
+
+input:focus {
+  border-bottom: 2px solid #D0A233;
+  outline: none;
+  color: white; }
+
+.message {
+  margin: 4vh 0;
+  height: 10vh;
+  border: 1px solid #D0A233;
+  border-radius: 3px;
+  background-color: transparent;
+  max-width: 38vw;
+  font-family: "Bitter", serif;
+  font-size: 0.8vw; }
+
+.message:focus {
+  border: 2px solid #D0A233;
+  outline: none;
+  color: white; }
+
+footer p {
+  text-align: center;
+  color: #DCC7A9;
+  font-family: "Bitter", serif; }
+
+/* Mobile */
+/* Larger than phablet (also point when grid becomes active) */
+/* Larger than tablet */
+/* Larger than desktop */
+/* Larger than Desktop HD */
+
+/*# sourceMappingURL=main.css.map */
