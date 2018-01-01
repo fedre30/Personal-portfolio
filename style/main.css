@@ -35,15 +35,6 @@ a {
   .scrollAction .scrollImage {
     width: 1vw; }
 
-/* Mobile */
-@media (max-width: 400px) {
-  .introduction {
-    margin: 0;
-    height: 35vh; } }
-/* Larger than phablet (also point when grid becomes active) */
-/* Larger than tablet */
-/* Larger than desktop */
-/* Larger than Desktop HD */
 #workflow {
   width: 100vw;
   height: 100vh; }
@@ -87,20 +78,6 @@ a {
 .row img {
   width: 100%; }
 
-/* Mobile */
-@media (max-width: 400px) {
-  .workflow {
-    margin: 0; }
-
-  .phaseTitle {
-    font-size: 2vw; }
-
-  .phaseParagraph {
-    font-size: 1.5vw; } }
-/* Larger than phablet (also point when grid becomes active) */
-/* Larger than tablet */
-/* Larger than desktop */
-/* Larger than Desktop HD */
 .projects {
   margin-top: 20vh; }
 
@@ -184,10 +161,6 @@ a {
 .dot {
   color: #DCC7A9; }
 
-/* Larger than phablet (also point when grid becomes active) */
-/* Larger than tablet */
-/* Larger than desktop */
-/* Larger than Desktop HD */
 .project2 {
   height: 100vh;
   width: 100vw; }
@@ -326,11 +299,5 @@ footer p {
   text-align: center;
   color: #DCC7A9;
   font-family: "Bitter", serif; }
-
-/* Mobile */
-/* Larger than phablet (also point when grid becomes active) */
-/* Larger than tablet */
-/* Larger than desktop */
-/* Larger than Desktop HD */
 
 /*# sourceMappingURL=main.css.map */
