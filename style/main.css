@@ -7,24 +7,138 @@ a {
 .scrollTarget {
   --currentSection: 0;
   margin-top: calc(-100vh * var(--currentSection));
-  transition: margin-top 0.5s ease; }
+  transition: margin-top 0.5s ease;
+  overflow: hidden; }
 
 .introduction {
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   text-align: center;
-  position: relative;
-  margin-bottom: 10vh; }
+  position: relative; }
+
+.introductionTitle {
+  position: absolute;
+  top: 33vh;
+  left: 32vw; }
+
+.authorName {
+  font-family: "Abril Fatface", regular;
+  color: white;
+  font-size: 5vw; }
+
+.profession {
+  font-family: "Abril Fatface", regular;
+  color: #D0A233;
+  font-size: 2.5vw; }
 
 .backgroundImage {
   width: 100vw;
-  max-height: 90vh; }
-  .backgroundImage img {
-    width: 80%; }
+  max-height: 100vh;
+  position: relative; }
+
+.bgIcon {
+  width: 3vw;
+  position: absolute; }
+  .bgIcon img {
+    width: 100%; }
+
+@media (max-width: 400px) {
+  .introduction {
+    margin: 0; } }
+.first {
+  top: 85vh;
+  left: 9vw; }
+
+.second {
+  top: 55vh;
+  left: 8vw; }
+
+.third {
+  top: 72vh;
+  left: 22vw; }
+
+.fourth {
+  top: 60vh;
+  left: 30vw; }
+
+.fifth {
+  top: 77vh;
+  left: 40vw; }
+
+.sixth {
+  top: 83vh;
+  left: 50vw; }
+
+.seventh {
+  top: 63vh;
+  left: 54vw; }
+
+.eighth {
+  top: 69vh;
+  left: 66vw; }
+
+.ninth {
+  top: 83vh;
+  left: 75vw; }
+
+.tenth {
+  top: 59vh;
+  left: 81vw; }
+
+.eleventh {
+  top: 75vh;
+  left: 88vw; }
+
+.twelfth {
+  top: 35vh;
+  left: 12vw; }
+
+.thirteenth {
+  top: 6vh;
+  left: 13vw; }
+
+.fourteenth {
+  top: 20vh;
+  left: 19vw; }
+
+.fifteenth {
+  top: 12vh;
+  left: 30vw; }
+
+.sixteenth {
+  top: 7vh;
+  left: 40vw; }
+
+.seventeenth {
+  top: 15vh;
+  left: 53vw; }
+
+.eighteenth {
+  top: 3vh;
+  left: 57vw; }
+
+.nineteenth {
+  top: 20vh;
+  left: 70vw; }
+
+.twentyth {
+  top: 37vh;
+  left: 78vw; }
+
+.twenty-first {
+  top: 6vh;
+  left: 81vw; }
+
+.twenty-second {
+  top: 23vh;
+  left: 87vw; }
 
 .scrollAction {
   width: 5vw;
-  margin: 0 auto; }
+  margin: 0 auto;
+  position: absolute;
+  bottom: 5vh;
+  left: 48vw; }
   .scrollAction .scroll {
     text-transform: uppercase;
     font-family: "Bitter", serif;
@@ -35,7 +149,7 @@ a {
   .scrollAction .scrollImage {
     width: 1vw; }
 
-#workflow {
+.workflow {
   width: 100vw;
   height: 100vh; }
 
@@ -44,7 +158,19 @@ a {
   text-align: center; }
   .sectionTitle .sectionImage {
     width: 5vw;
-    text-align: center; }
+    text-align: center;
+    animation-name: spinning;
+    animation-duration: 6s;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease; }
+@keyframes spinning {
+  0% {
+    transform: rotate(0deg); }
+  60% {
+    transform: rotate(360deg); }
+  100% {
+    transform: rotate(360deg); } }
   .sectionTitle h3 {
     color: white;
     font-family: "Abril Fatface", regular;
@@ -55,10 +181,10 @@ a {
   font-family: "Bitter", serif;
   font-style: italic;
   color: #DCC7A9;
-  margin: 4vh;
+  margin: 4vh 0;
   text-align: center; }
   .subtitle h5 {
-    font-size: 2vw; }
+    font-size: 1.8vw; }
 
 .phaseTitle {
   font-family: "Bitter", serif;
@@ -78,8 +204,18 @@ a {
 .row img {
   width: 100%; }
 
+@media (max-width: 400px) {
+  .subtitle {
+    margin: 0; }
+
+  .phaseTitle {
+    font-size: 2.5vw; }
+
+  .phaseParagraph {
+    margin-top: 2vh;
+    font-size: 2vw; } }
 .projects {
-  margin-top: 20vh; }
+  max-width: 100vw; }
 
 .sectionTitleProjects {
   width: 100%;
@@ -87,15 +223,29 @@ a {
   margin-bottom: 20vh; }
   .sectionTitleProjects .sectionImage {
     width: 5vw;
-    text-align: center; }
+    text-align: center;
+    animation: rotate-scale-up-diag-1 6s ease infinite; }
+@keyframes rotate-scale-up-diag-1 {
+  0% {
+    transform: scale(1) rotate3d(1, 1, 0, 0deg); }
+  20% {
+    transform: scale(1.5) rotate3d(1, 1, 0, -180deg); }
+  40% {
+    transform: scale(1) rotate3d(1, 1, 0, -360deg); }
+  100% {
+    transform: scale(1) rotate3d(1, 1, 0, -360deg); } }
   .sectionTitleProjects h3 {
     color: white;
     font-family: "Abril Fatface", regular;
     font-size: 5vw;
     display: inline-block; }
 
+@media (max-width: 400px) {
+  .projects {
+    margin: 15vh; } }
 .project-1 {
   height: 80vh;
+  width: 100vw;
   position: relative; }
 
 .rectangle-1 {
@@ -118,7 +268,8 @@ a {
   color: #D0A233;
   position: absolute;
   top: -8vh;
-  left: 60vw; }
+  left: 60vw;
+  text-shadow: 0 3px 8px #394047; }
 
 .tagsContainer {
   position: absolute;
@@ -148,9 +299,7 @@ a {
   left: 38vw; }
 
 .phases {
-  margin-top: 10vh; }
-  .phases .phaseParagraph {
-    width: 20vw; }
+  margin-top: 5vh; }
 
 .phaseTitle-project {
   font-family: "Bitter", serif;
@@ -161,6 +310,23 @@ a {
 .dot {
   color: #DCC7A9; }
 
+@media (max-width: 400px) {
+  .project-1 {
+    max-width: 400px; }
+
+  .rectangle-1 {
+    display: none; }
+
+  .imageProject {
+    left: 0;
+    width: 50vw; }
+
+  .projectTitle {
+    left: 7vw;
+    top: -15vh; }
+
+  .phases {
+    display: none; } }
 .project2 {
   height: 100vh;
   width: 100vw; }
@@ -191,7 +357,8 @@ a {
   color: white;
   position: absolute;
   left: 20vw;
-  top: -7vh; }
+  top: -7vh;
+  text-shadow: 0 3px 8px #394047; }
 
 .tagsContainer2 {
   position: absolute;
@@ -208,7 +375,9 @@ a {
   top: 15vh; }
 
 .project3 {
-  height: 90vh; }
+  width: 100vw;
+  height: 100vh;
+  position: relative; }
 
 .projectTitle3 {
   width: 50vw;
@@ -217,23 +386,22 @@ a {
   color: #D0A233;
   position: absolute;
   top: -8vh;
-  left: 38vw; }
+  left: 38vw;
+  text-shadow: 0 3px 8px #394047; }
 
 .about {
+  width: 100vw;
   height: 100vh; }
 
 .bioSection {
   position: relative;
-  height: 100vh; }
-
-.aboutTitle {
-  margin-bottom: 10vh; }
+  height: 70vh; }
 
 .bioImage {
   width: 80vw;
   height: auto;
   position: absolute;
-  right: -2vw; }
+  right: 0; }
   .bioImage img {
     width: 100%; }
 
@@ -249,19 +417,31 @@ a {
   font-weight: bold; }
 
 .highlight {
-  margin-top: 20vh;
   color: #D0A233;
   font-weight: bold; }
 
 .contacts {
-  height: 70vh;
+  height: 100vh;
   margin-bottom: 20vh; }
-
+  .contacts .sectionImage {
+    width: 5vw;
+    text-align: center;
+    animation: rotate-scale-up-diag-1 6s ease infinite; }
+@keyframes rotate-scale-up-diag-1 {
+  0% {
+    transform: scale(1) rotate3d(1, 1, 0, 0deg); }
+  30% {
+    transform: scale(1.5) rotate3d(1, 1, 0, -180deg); }
+  60% {
+    transform: scale(1) rotate3d(1, 1, 0, -360deg); }
+  100% {
+    transform: scale(1) rotate3d(1, 1, 0, -360deg); } }
 .contactsTitle {
   margin-bottom: 15vh; }
 
 .icon {
-  max-width: 10vw; }
+  max-width: 10vw;
+  margin-bottom: 5vh; }
   .icon img {
     width: 20%; }
 
@@ -273,7 +453,8 @@ input {
   border-right: none;
   border-left: none;
   font-family: "Bitter", serif;
-  font-size: 0.8vw; }
+  font-size: 0.8vw;
+  margin-bottom: 3vh; }
 
 input:focus {
   border-bottom: 2px solid #D0A233;

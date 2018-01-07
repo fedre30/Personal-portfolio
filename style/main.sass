@@ -1,56 +1,171 @@
 // COLORS
-$brey : #394047
+$brey: #394047
 $mustard: #D0A233
 $ivory: #DCC7A9
 $lightgrey: rgba(176, 188, 196, 0.6)
-$tagOpacity : 0.7
+$tagOpacity: 0.7
 
 //FONTS
-$abril : 'Abril Fatface', regular
-$bitter : 'Bitter', serif
+$abril: 'Abril Fatface', regular
+$bitter: 'Bitter', serif
 
 $sectionTitle: 5vw
-
-
-
 
 body
   background-color: $brey
 
+
 a
   text-decoration: none
-
 
 .scrollTarget
   --currentSection: 0
   margin-top: calc(-100vh * var(--currentSection))
   transition: margin-top 0.5s ease
+  overflow: hidden
 
 // INTRODUCTION
 
 .introduction
-  width: 100%
+  width: 100vw
   height: 100vh
   text-align: center
+  //margin-bottom: 10vh
   position: relative
-  margin-bottom: 10vh
 
+.introductionTitle
+  position: absolute
+  top: 33vh
+  left: 32vw
 
+.authorName
+  font-family: $abril
+  color: white
+  font-size: 5vw
+
+.profession
+  font-family: $abril
+  color: $mustard
+  font-size: 2.5vw
 
 .backgroundImage
   width: 100vw
-  max-height: 90vh
+  max-height: 100vh
+  position: relative
 
+.bgIcon
+  width: 3vw
+  position: absolute
 
   img
-    width: 80%
+    width: 100%
 
+@media (max-width: 400px)
+  .introduction
+    margin: 0
+
+//ICONS POSITIONING
+
+  //Bottom section
+
+.first
+  top: 85vh
+  left: 9vw
+
+.second
+  top: 55vh
+  left: 8vw
+
+.third
+  top: 72vh
+  left: 22vw
+
+.fourth
+  top: 60vh
+  left: 30vw
+
+.fifth
+  top: 77vh
+  left: 40vw
+
+.sixth
+  top: 83vh
+  left: 50vw
+
+.seventh
+  top: 63vh
+  left: 54vw
+
+.eighth
+  top: 69vh
+  left: 66vw
+
+.ninth
+  top: 83vh
+  left: 75vw
+
+.tenth
+  top: 59vh
+  left: 81vw
+
+.eleventh
+  top: 75vh
+  left: 88vw
+
+//upper section
+
+.twelfth
+  top: 35vh
+  left: 12vw
+
+.thirteenth
+  top: 6vh
+  left: 13vw
+
+.fourteenth
+  top: 20vh
+  left: 19vw
+
+.fifteenth
+  top: 12vh
+  left: 30vw
+
+.sixteenth
+  top: 7vh
+  left: 40vw
+
+.seventeenth
+  top: 15vh
+  left: 53vw
+
+.eighteenth
+  top: 3vh
+  left: 57vw
+
+.nineteenth
+  top: 20vh
+  left: 70vw
+
+.twentyth
+  top: 37vh
+  left: 78vw
+
+.twenty-first
+  top: 6vh
+  left: 81vw
+
+.twenty-second
+  top: 23vh
+  left: 87vw
+
+//SCROLL
 
 .scrollAction
   width: 5vw
   margin: 0 auto
-
-
+  position: absolute
+  bottom: 5vh
+  left: 48vw
 
   .scroll
     text-transform: uppercase
@@ -58,33 +173,39 @@ a
     font-size: 1vw
     display: inline-block
 
-
     a
       color: white
-
 
   .scrollImage
     width: 1vw
 
-
-
 // WORKFLOW
 
-#workflow
+.workflow
   width: 100vw
   height: 100vh
-
 
 .sectionTitle
   width: 100%
   text-align: center
 
-
-
-
   .sectionImage
     width: 5vw
     text-align: center
+    animation-name: spinning
+    animation-duration: 6s
+    animation-delay: 0s
+    animation-iteration-count: infinite
+    animation-timing-function: ease
+
+  @keyframes spinning
+    0%
+      transform: rotate(0deg)
+    60%
+      transform: rotate(360deg)
+    100%
+      transform: rotate(360deg)
+
 
   h3
     color: white
@@ -92,18 +213,15 @@ a
     font-size: $sectionTitle
     display: inline-block
 
-
 .subtitle
   font-family: $bitter
   font-style: italic
   color: $ivory
-  margin: 4vh
+  margin: 4vh 0
   text-align: center
 
   h5
-    font-size: 2vw
-
-
+    font-size: 1.8vw
 
 .phaseTitle
   font-family: $bitter
@@ -120,28 +238,59 @@ a
   font-weight: 400
   margin-top: 5vh
 
-
-
 .row img
   width: 100%
+
+
+@media (max-width: 400px)
+
+
+  .subtitle
+    margin: 0
+
+  .phaseTitle
+    font-size: 2.5vw
+
+  .phaseParagraph
+    margin-top: 2vh
+    font-size: 2vw
 
 
 
 // PROJECTS
 
 .projects
-  margin-top: 20vh
+  //margin-top: 20vh
+  max-width: 100vw
+
 
 .sectionTitleProjects
   width: 100%
   text-align: center
   margin-bottom: 20vh
 
-
-
   .sectionImage
     width: 5vw
     text-align: center
+    animation: rotate-scale-up-diag-1 6s ease infinite
+
+
+
+  @keyframes rotate-scale-up-diag-1
+    0%
+      transform: scale(1) rotate3d(1, 1, 0, 0deg)
+
+    20%
+      transform: scale(1.5) rotate3d(1, 1, 0, -180deg)
+
+
+    40%
+      transform: scale(1) rotate3d(1, 1, 0, -360deg)
+
+    100%
+      transform: scale(1) rotate3d(1, 1, 0, -360deg)
+
+
 
   h3
     color: white
@@ -150,11 +299,15 @@ a
     display: inline-block
 
 
+@media (max-width: 400px)
+  .projects
+    margin: 15vh
 
 // PROJECT 1
 
 .project-1
   height: 80vh
+  width: 100vw
   position: relative
 
 .rectangle-1
@@ -180,12 +333,13 @@ a
   position: absolute
   top: -8vh
   left: 60vw
-  //TODO BOX SHADOW
+  text-shadow: 0 3px 8px $brey
 
 .tagsContainer
   position: absolute
   top: 5vh
   left: 38vw
+
 .tag
   display: inline-block
   width: 7vw
@@ -199,7 +353,6 @@ a
   border-radius: 0.5vw
   opacity: $tagOpacity
 
-
 .projectParagraph
   font-family: $bitter
   font-size: 1vw
@@ -210,10 +363,9 @@ a
   left: 38vw
 
 .phases
-  margin-top: 10vh
+  margin-top: 5vh
 
-  .phaseParagraph
-    width: 20vw
+
 
 .phaseTitle-project
   font-family: $bitter
@@ -224,6 +376,25 @@ a
 .dot
   color: $ivory
 
+@media (max-width: 400px)
+
+  .project-1
+    max-width: 400px
+
+  .rectangle-1
+    display: none
+
+  .imageProject
+    left: 0
+    width: 50vw
+
+  .projectTitle
+    left: 7vw
+    top: -15vh
+
+  .phases
+    display: none
+
 
 //PROJECT 2
 
@@ -231,12 +402,10 @@ a
   height: 100vh
   width: 100vw
 
-
 .projectShowcase
   position: relative
   height: 40vh
   clear: both
-
 
 .rectangle-2
   background-color: $ivory
@@ -261,6 +430,7 @@ a
   position: absolute
   left: 20vw
   top: -7vh
+  text-shadow: 0 3px 8px $brey
 
 .tagsContainer2
   position: absolute
@@ -279,7 +449,9 @@ a
 //PROJECT 3
 
 .project3
-  height: 90vh
+  width: 100vw
+  height: 100vh
+  position: relative
 
 .projectTitle3
   width: 50vw
@@ -289,26 +461,25 @@ a
   position: absolute
   top: -8vh
   left: 38vw
-
+  text-shadow: 0 3px 8px $brey
 
 // ABOUT
 
 .about
+  width: 100vw
   height: 100vh
 
 .bioSection
   position: relative
-  height: 100vh
+  height: 70vh
 
-
-.aboutTitle
-  margin-bottom: 10vh
 
 .bioImage
   width: 80vw
   height: auto
   position: absolute
-  right: -2vw
+  right: 0
+
 
   img
     width: 100%
@@ -325,22 +496,45 @@ a
   font-weight: bold
 
 .highlight
-  margin-top: 20vh
+  //margin-top: 20vh
   color: $mustard
   font-weight: bold
-
 
 // CONTACTS
 
 .contacts
-  height: 70vh
+  height: 100vh
   margin-bottom: 20vh
+
+  .sectionImage
+    width: 5vw
+    text-align: center
+    animation: rotate-scale-up-diag-1 6s ease infinite
+
+
+
+  @keyframes rotate-scale-up-diag-1
+    0%
+      transform: scale(1) rotate3d(1, 1, 0, 0deg)
+
+    30%
+      transform: scale(1.5) rotate3d(1, 1, 0, -180deg)
+
+
+    60%
+      transform: scale(1) rotate3d(1, 1, 0, -360deg)
+
+    100%
+      transform: scale(1) rotate3d(1, 1, 0, -360deg)
+
+
 
 .contactsTitle
   margin-bottom: 15vh
 
 .icon
   max-width: 10vw
+  margin-bottom: 5vh
   img
     width: 20%
 
@@ -354,13 +548,12 @@ input
   border-left: none
   font-family: $bitter
   font-size: 0.8vw
+  margin-bottom: 3vh
 
 input:focus
   border-bottom: 2px solid $mustard
   outline: none
   color: white
-
-
 
 .message
   margin: 4vh 0
@@ -376,6 +569,8 @@ input:focus
   border: 2px solid $mustard
   outline: none
   color: white
+
+footer
 
 footer p
   text-align: center
