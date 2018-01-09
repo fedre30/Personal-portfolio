@@ -18,6 +18,27 @@ body
 a
   text-decoration: none
 
+
+  //MENU
+
+.menuContainer
+  display: flex
+  justify-content: flex-end
+  flex-direction: column
+  position: fixed
+  top: 1vh
+  right: 1vw
+
+
+.menu-item
+  width: 12px
+  height: 12px
+  margin-bottom: 1vh
+  border: 1px solid white
+  border-radius: 100vw
+
+  //SCROLLTARGET
+
 .scrollTarget
   --currentSection: 0
   margin-top: calc(-100vh * var(--currentSection))
@@ -50,8 +71,11 @@ a
 
 .backgroundImage
   width: 100vw
+  height: 100vh
   max-height: 100vh
   position: relative
+  transform: translateZ(80px) scale(1)
+  transform-style: preserve-3d
 
 .bgIcon
   width: 3vw
@@ -237,6 +261,7 @@ a
   font-size: 0.8vw
   font-weight: 400
   margin-top: 5vh
+  line-height: 2.5vh
 
 .row img
   width: 100%
@@ -297,6 +322,7 @@ a
     font-family: $abril
     font-size: $sectionTitle
     display: inline-block
+    margin-top: 3vh
 
 
 @media (max-width: 400px)
@@ -440,7 +466,7 @@ a
 .projectParagraph2
   font-family: $bitter
   font-size: 1vw
-  color: white
+  color: $brey
   width: 40vw
   position: absolute
   left: 20vw
@@ -450,7 +476,7 @@ a
 
 .project3
   width: 100vw
-  height: 100vh
+  height: 90vh
   position: relative
 
 .projectTitle3
@@ -471,12 +497,12 @@ a
 
 .bioSection
   position: relative
-  height: 70vh
+  height: 80vh
+  margin-bottom: 20vh
 
 
 .bioImage
   width: 80vw
-  height: auto
   position: absolute
   right: 0
 
@@ -490,7 +516,7 @@ a
   font-family: $bitter
   font-size: 1vw
   left: 66vw
-  top: 15vh
+  top: 5vh
 
 .bold
   font-weight: bold
@@ -504,7 +530,6 @@ a
 
 .contacts
   height: 100vh
-  margin-bottom: 20vh
 
   .sectionImage
     width: 5vw
@@ -571,6 +596,7 @@ input:focus
   color: white
 
 footer
+  margin-top: 20vh
 
 footer p
   text-align: center
