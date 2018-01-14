@@ -1,5 +1,5 @@
 //BG IMAGE
-const rotateCoeff = 15;
+const rotateCoeff = 20;
 
 const icons = document.querySelector('.introduction');
 let screenWidth = window.innerWidth;
@@ -79,10 +79,16 @@ function setCurrentSection(section) {
     }
 }
 
-window.addEventListener('wheel', function () {
+const lethargy = new Lethargy();
+
+window.addEventListener('wheel', function (e) {
+    event.preventDefault();
+
+    if(lethargy.check(e) === false){
+        return;
+    }
 
     if(window.innerWidth > 400){
-        event.preventDefault();
         if(sectionIsAnimating === true){
             return;
         }
