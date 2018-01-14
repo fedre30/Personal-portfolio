@@ -5,7 +5,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Bitter: 400, 700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Bitter|Lato" rel="stylesheet">
     <link href="style/reset.css" rel="stylesheet">
     <link rel="stylesheet" href="style/skeleton.css">
     <link rel="stylesheet" href="style/main.css">
@@ -20,13 +20,23 @@
 
     <div class="menuContainer">
         <nav class="menu">
-            <div class="menu-item menuIntroduction"></div>
-            <div class="menu-item menuWorkflow"></div>
-            <div class="menu-item menuProjectFanhub"></div>
-            <div class="menu-item menuProjectJellyDodge"></div>
-            <div class="menu-item menuProjectNespresso"></div>
-            <div class="menu-item menuAbout"></div>
-            <div class="menu-item menuContacts"></div>
+            <div class="menu-item menuIntroduction" data-tooltip-id="#menuIntro"><span class="introLabel"
+                                                                                       id="menuIntro">Federica</span>
+            </div>
+            <div class="menu-item menuWorkflow" data-tooltip-id="#menuWorkflow"><span class="introLabel"
+                                                                                      id="menuWorkflow">Workflow</span>
+            </div>
+            <div class="menu-item menuProjectFanhub" data-tooltip-id="#menuFanhub"><span class="introLabel"
+                                                                                         id="menuFanhub">Fanhub</span>
+            </div>
+            <div class="menu-item menuProjectJellyDodge" data-tooltip-id="#menuJelly"><span class="introLabel"
+                                                                                            id="menuJelly">Jelly Dodge</span>
+            </div>
+            <div class="menu-item menuProjectNespresso" data-tooltip-id="#menuNespresso"><span class="introLabel"
+                                                                                               id="menuNespresso">Nespresso</span>
+            </div>
+            <div class="menu-item menuAbout" data-tooltip-id="#menuAbout"><span class="introLabel"
+                                                                                id="menuAbout">About</span></div>
         </nav>
     </div>
 
@@ -35,8 +45,8 @@
     <header>
         <div class="introduction scrollSection">
             <div class="introductionTitle">
-                <h2 class="authorName">Federica Alfano</h2>
-                <h3 class="profession">Frontend Developer</h3>
+                <div class="typewriter"><h2 class="authorName">Federica Alfano</h2></div>
+                <h3 class="profession">Frontend Web designer</h3>
             </div>
             <div class="backgroundImage">
                 <div class="bgIcon first"><img src="img/spiral_up.svg" alt="Spiral"></div>
@@ -65,12 +75,12 @@
 
             <div class="scrollAction">
                 <img class="scrollImage" src="img/scroll_img.png">
-                <div class="scroll"><a href="#"> scroll</a></div>
+                <div class="scroll"> scroll</div>
             </div>
         </div>
     </header>
-    
-    
+
+
     <!-- WORKFLOW -->
 
     <section class="workflow scrollSection">
@@ -122,7 +132,7 @@
             </div>
         </div>
     </section>
-    
+
     <!--PROJECTS -->
 
     <section class="projects scrollSection">
@@ -134,7 +144,13 @@
         <section class="project-1 scrollSection">
 
             <div class="rectangle-1"></div>
-            <div class="imageProject"><img src="img/mockup_fanhub.jpg" alt="mockup"></div>
+            <div class="video">
+                <video class="videoPlayer" autoplay muted loop>
+                    <source src="video/fanhub.mov.vp8" type="video/vp8" />
+                    <source src="video/fanhub.mov.mp4" type="video/mp4" />
+                </video>
+
+            </div>
             <h3 class="projectTitle">Fanhub</h3>
             <div class="tagsContainer">
                 <div class="tag">#Team Project</div>
@@ -150,37 +166,19 @@
                 features in Javascript and the upload film section in Node.JS.
             </p>
 
-            <div class="container phases">
-                <div class="row">
-                    <div class="three columns">
-                        <h4 class="phaseTitle-project">P<span class="dot">.</span>P<span class="dot">.</span></h4>
-                        <p class="phaseParagraph">Even though users easily find fan-made films on the net, there’s no
-                            existing plateform which regroup all fan films.</p>
-                    </div>
-                    <div class="three columns">
-                        <h4 class="phaseTitle-project">E<span class="dot">.</span>E<span class="dot">.</span></h4>
-                        <p class="phaseParagraph">Categories, tags, a searchbar and a hamburger menu are available in
-                            order to let the user easily find a fan film.</p>
-                    </div>
-                    <div class="three columns">
-                        <h4 class="phaseTitle-project">S<span class="dot">.</span>S<span class="dot">.</span></h4>
-                        <p class="phaseParagraph">Fanhub has been conceived to be a one-page website where users access
-                            to film through an overlay which contains all film details and the video player.</p>
-                    </div>
-                    <div class="three columns">
-                        <h4 class="phaseTitle-project">D<span class="dot">.</span>D<span class="dot">.</span></h4>
-                        <p class="phaseParagraph">The website is dynamic thanks to Javascript data requests that make
-                            fanhub modular and optimised., such as template.</p>
-                    </div>
-                </div>
-            </div>
+
         </section>
 
-        <section class="project2 scrollSection">
+        <section class="project-2 scrollSection">
             <div class="projectShowcase">
                 <div class="rectangle-2"></div>
-                <div class="imageProject2"><img src="img/mockup_jellydodge.jpg" alt="mockup"></div>
-                <h3 class="projectTitle2">Jelly Dodge</h3>
+                <div class="video-2">
+                    <video class="videoPlayer" autoplay muted loop>
+                        <source src="video/jelly_dodge.mov.vp8" type="video/vp8" />
+                        <source src="video/jelly_dodge.mov.mp4" type="video/mp4" />
+                    </video>
+                </div>
+                <h3 class="projectTitle">Jelly Dodge</h3>
                 <div class="tagsContainer2">
                     <div class="tag">#Team Project</div>
                     <div class="tag">#Javascript</div>
@@ -188,7 +186,7 @@
 
                 <p class="projectParagraph2">
                     Brick game created during a sleepless night at HETIC.
-                    We were a team composed by three designers and two JS developers. The other developer and I
+                    We were a team composed by three designers and two JS developers. The other developer and I
                     coded
                     the
                     game
@@ -196,186 +194,87 @@
                 </p>
             </div>
 
-            <div class="container phases">
-                <div class="row">
-                    <div class="three columns">
-                        <h4 class="phaseTitle-project">P<span class="dot">.</span>P<span class="dot">.</span></h4>
-                        <p class="phaseParagraph">Javascript-coded games are known to be not very optimized despite web
-                            games are widespread. This is why the real challenge was to create a bug-free funny
-                            game.</p>
-                    </div>
-                    <div class="three columns">
-                        <h4 class="phaseTitle-project">E<span class="dot">.</span>E<span class="dot">.</span></h4>
-                        <p class="phaseParagraph">User plays through keyboard using typical gameplay keys such as arrows
-                            and no mouse is needed so that game can be played on laptops too (as trackpads might not be
-                            so practical).</p>
-                    </div>
-                    <div class="three columns">
-                        <h4 class="phaseTitle-project">S<span class="dot">.</span>S<span class="dot">.</span></h4>
-                        <p class="phaseParagraph">In order to make the game more challenging, fishes-falling’s speed
-                            increases after a certain amount of time and so on.</p>
-                    </div>
-                    <div class="three columns">
-                        <h4 class="phaseTitle-project">D<span class="dot">.</span>D<span class="dot">.</span></h4>
-                        <p class="phaseParagraph">Jelly dodge is a Javascript game coded through Canvas API which allows
-                            web graphics rendering. Oriented Object Programmation has been used to improve
-                            performances.</p>
-                    </div>
-                </div>
-            </div>
 
         </section>
 
 
-        <section class="project3 scrollSection">
+        <section class="project-3 scrollSection">
 
             <div class="rectangle-1"></div>
-            <div class="imageProject"><img src="img/mockup_nespresso.jpg" alt="mockup"></div>
-            <h3 class="projectTitle3">Redesign Nespresso</h3>
+            <div class="video">
+                <video class="videoPlayer" autoplay muted loop>
+                    <source src="video/nespresso.mov.vp8" type="video/vp8" />
+                    <source src="video/nespresso.mov.mp4" type="video/mp4" />
+                </video>
+
+            </div>
+            <h3 class="projectTitle">Redesign Nespresso</h3>
             <div class="tagsContainer">
                 <div class="tag">#Solo Project</div>
                 <div class="tag">#UX/UI</div>
             </div>
 
-            <p class="projectParagraph">
-                UX Design project that consists on improving User Experience of Nespresso Website.
-                 Wireframe
-                was
-                created on Sketch and protoyped on InVision.
-            </p>
-            <div class="container phases">
-                <div class="row">
-                    <div class="three columns">
-                        <h4 class="phaseTitle-project">P<span class="dot">.</span>P<span class="dot">.</span></h4>
-                        <p class="phaseParagraph">Current Nespresso Website is not well structured and seems quite
-                            messy, which makes user experience confusing. This may discourage user to buy Nespresso
-                            products online. </p>
-                    </div>
-                    <div class="three columns">
-                        <h4 class="phaseTitle-project">E<span class="dot">.</span>E<span class="dot">.</span></h4>
-                        <p class="phaseParagraph">Before accessing Nespresso website, a test is proposed in order to
-                            find the most suitable product for user.  The main purpose is making user experience more
-                            personal and interactive.</p>
-                    </div>
-                    <div class="three columns">
-                        <h4 class="phaseTitle-project">S<span class="dot">.</span>S<span class="dot">.</span></h4>
-                        <p class="phaseParagraph">The best strategy was giving a lighter design to Nespresso and its
-                            customers, using colors that remind coffee shades.  Moreover, many call-to-actions allow the
-                            user to easily find and buy a product.</p>
-                    </div>
-                    <div class="three columns">
-                        <h4 class="phaseTitle-project">D<span class="dot">.</span>D<span class="dot">.</span></h4>
-                        <p class="phaseParagraph">All user interactions are prototyped on InVision. As every single
-                            possible choice has its own Wireframe, User Experience has been schematized through a
-                            flowchart. </p>
-                    </div>
-                </div>
-            </div>
+            <p class="projectParagraph">UX Design project that consists on improving User Experience of Nespresso Website. Wireframe was created on Sketch and protoyped on InVision.</p>
+
         </section>
 
     </section>
 
-    <!-- ABOUT -->
-    
+    <!-- ABOUT  & CONTACTS-->
+
     <section class="about scrollSection">
         <div class="sectionTitle aboutTitle">
             <img class="sectionImage" src="img/spiral_icon.png" alt="spiral">
             <h3>About</h3>
         </div>
 
-        <div class="bioSection">
-            <div class="bioImage"><img src="img/federica.jpg" alt="Federica Alfano"></div>
-            <p class="bioText">I'm a 22 years old italian girl living her dream in Paris as a decadent philosopher and
-                <span class="bold">aspirant web-designer</span> .
-                People may define me as a curious "multi-potentialist": I have many passions that I'd like to combine in
-                one.
-                Any sort of art really thrills me such as cinema, video-making, photography,dance, and most of all
-                music,
-                which has been part of my life since I was such a cutie tiny girl.
-                At present I can play violin, piano, guitar and ukulele but I mostly enjoy composing songs.<br>
-                Why? Well, composing and all my interests have a thing in common: <span class="bold">it's all about language learning</span>.<br>
-                I've been learning four foreign languages (in addition to my mother tongue) because I love decrypting
-                and
-                manipulating symbols and sounds, in order to communicate. That's why logical and computing languages are
-                very challenging to me.<br><br>
-
-                <span class="highlight">I’m currently looking for an internship in Paris starting on July 2018.</span>
-            </p>
-        </div>
-
-    </section>
-
-    <!-- CONTACTS -->
-    
-    <section class="contacts scrollSection">
-        <div class="sectionTitle contactsTitle">
-            <img class="sectionImage" src="img/icon_star.png" alt="star">
-            <h3>Contacts</h3>
-        </div>
-
-        <div class="container">
+        <div class="bioSection container">
             <div class="row">
-                <div class="logos six columns">
-                    <div class="container">
-                        <div class="row">
-                            <div class="four columns icon">
-                                <a href="https://www.facebook.com/federica.alfano.18" target="_blank">
-                                    <img class="imageLogo" src="img/facebook.svg" alt="Facebook logo">
-                                </a>
-                            </div>
-                            <div class="four columns icon">
-                                <a href="https://twitter.com/melofedre" target="_blank">
-                                    <img class="imageLogo" src="img/twitter.svg" alt="Twitter logo">
-                                </a>
-                            </div>
-                            <div class="four columns icon">
-                                <a href="https://github.com/fedre30" target="_blank">
-                                    <img class="imageLogo" src="img/github.svg" alt="Github logo">
-                                </a>
-                            </div>
-                        </div>
+                <div class="bioImage six columns"><img src="img/federica.jpg" alt="Federica Alfano"></div>
 
-                        <div class="row">
-                            <div class="four columns icon">
-                                <a href="img/FedericaAlfano_CV.pdf" target="_blank">
-                                    <img class="imageLogo" src="img/resume.svg" alt="Resume icon">
-                                </a>
-                            </div>
-                            <div class="four columns icon">
-                                <a href="https://fr.linkedin.com/in/federicaalfano" target="_blank">
-                                    <img class="imageLogo" src="img/linkedin.svg" alt="Linkedin logo">
-                                </a>
-                            </div>
-                            <div class="four columns icon">
-                                <a href="https://codepen.io/alfanofederica/" target="_blank">
-                                    <img class="imageLogo" src="img/codepen.svg" alt="Codepen logo">
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <p class="bioText six columns">I'm a 22 years old italian girl living her dream in Paris as a decadent
+                    philosopher
+                    and
+                    <span class="bold">aspirant web-designer</span> .
+                    People may define me as a curious "multi-potentialist": I have many passions that I'd like to
+                    combine in
+                    one.
+                    Any sort of art really thrills me such as cinema, video-making, photography, dance, and most of all
+                    music,
+                    which has been part of my life since I was such a cutie tiny girl.
+                    At present I can play violin, piano, guitar and ukulele but I mostly enjoy composing songs.<br>
+                    Why? Well, composing and all my interests have a thing in common: <span class="bold">it's all about language learning</span>.<br>
+                    I've been learning four foreign languages (in addition to my mother tongue) because I love
+                    decrypting
+                    and
+                    manipulating symbols and sounds, in order to communicate. <br>That's why logical and computing
+                    languages
+                    are
+                    very challenging to me.<br><br>
 
-                <div class="contactForm six columns">
-                    <form class="form">
-                        <div class="row">
-                            <input type="text" class="name six columns" placeholder="Name">
-                            <input type="email" class="email six columns" placeholder="Email">
-                        </div>
-                        <div class="row">
-                            <textarea class="message twelve columns" placeholder="Message"></textarea>
-                        </div>
-                        <button type="submit" class="send">Send</button>
-                    </form>
-                </div>
+                    <span class="highlight">I’m currently looking for an internship in Paris starting on July 2018.</span>
+                </p>
+            </div>
+
+
+        </div>
+
+        <div class="contactContainer">
+            <div class="contact"><p class="contactMe"> ~ Feel free to <span class="highlight">contact me</span></p></div>
+            <div class="animojiContainer">
+                <img src="img/Animoji.gif">
             </div>
         </div>
 
-        <footer>
-            <p>©Copyright 2018 Federica Alfano</p>
-        </footer>
-
+        <div class="logos">
+            <div class="logo-item"><a href="" target="_blank"><img src="img/mail.svg" alt=""></a></div>
+            <div class="logo-item"><a href="https://github.com/fedre30" target="_blank"><img src="img/github.svg" alt=""></a></div>
+            <div class="logo-item"><a href="https://codepen.io/alfanofederica/" target="_blank"><img src="img/codepen.svg" alt=""></a></div>
+            <div class="logo-item"><a href="https://www.facebook.com/federica.alfano.18" target="_blank"><img src="img/facebook.svg" alt=""></a></div>
+            <div class="logo-item"><a href="https://www.linkedin.com/in/federicaalfano/" target="_blank"><img src="img/linkedin.svg" alt=""></a></div>
+            <div class="logo-item"><a href="img/FedericaAlfano_CV.pdf" target="_blank"><img src="img/resume.svg" alt=""></a></div>
+        </div>
     </section>
-
 
 </div>
 <script src="main.js"></script>
