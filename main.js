@@ -2,8 +2,10 @@
 const rotateCoeff = 20;
 
 const icons = document.querySelector('.introduction');
+const bioImage = document.querySelector('.bioPicture');
 let screenWidth = window.innerWidth;
 let screenHeight = window.innerHeight;
+
 
 icons.addEventListener('mousemove',function (ev) {
 
@@ -12,10 +14,25 @@ icons.addEventListener('mousemove',function (ev) {
     let centerY = (screenHeight - (icons.clientY || icons.clientTop)) / 2;
     let relativeX =(ev.clientX - centerX) / screenWidth / 2 ;
     let relativeY = (ev.clientY - centerY)  / screenHeight / 2;
-
     icons.style.transform = 'perspective(1000px)' + 'rotateY('+ (relativeX * rotateCoeff) +'deg)  rotateX('+ (relativeY * inverseRatio * rotateCoeff) +'deg)';
 
 });
+
+bioImage.addEventListener('mousemove', function (ev) {
+
+    let inverseRatio = screenHeight / screenWidth;
+    let centerX = (screenWidth - (bioImage.clientX || bioImage.clientLeft)) / 2;
+    let centerY = (screenHeight - (bioImage.clientY || bioImage.clientTop)) / 2;
+    let relativeX =(ev.clientX - centerX) / screenWidth / 2 ;
+    let relativeY = (ev.clientY - centerY)  / screenHeight / 2;
+
+
+    bioImage.style.transform = 'perspective(1000px)' + 'rotateY('+ (relativeX * rotateCoeff) +'deg)  rotateX('+ (relativeY * inverseRatio * rotateCoeff) +'deg)';
+
+});
+
+
+
 
 
 
@@ -31,7 +48,7 @@ const projectTitle = document.querySelector('.projectTitle');
 
 function refreshSectionDots(currentSection) {
     for(let i = 0; i < dots.length; i++){
-        dots[i].style.backgroundColor = i === currentSection ? 'white' : 'transparent';
+        dots[i].style.background = i === currentSection ? 'linear-gradient(to right, #D0A233, #FFFFFF, #7F8990)' : 'transparent';
 
     }
 }
@@ -88,7 +105,8 @@ window.addEventListener('wheel', function (e) {
         return;
     }
 
-    if(window.innerWidth > 400){
+    if(window.innerWidth > 480){
+
         if(sectionIsAnimating === true){
             return;
         }
@@ -133,71 +151,3 @@ for(let i = 0; i < dots.length; i++){
 }
 
 
-
-
-
-
-// CONTACT FORM
-
-/*
-document.querySelector(".send").addEventListener("click", function () {
-    const name = document.querySelector('.name').value;
-    const email = document.querySelector('.email').value;
-    const message = document.querySelector('.message').value;
-    let statusEl = document.querySelector('#status');
-
-    if (name.length === 0 || email.length === 0 || message.length === 0)
-    {
-        statusEl.innerText = "You must fill all the fields!";
-        return;
-    }
-
-    document.querySelector(".send").disabled= true;
-
-    const mailData = {
-        name: name,
-        email: email,
-        message: message,
-    };
-
-    let xhr = new XMLHttpRequest();
-
-    xhr.onload = function(){
-        if(xhr.status === 200){
-
-            statusEl.innerText= "Thank you for your message!";
-        }
-        else{
-            statusEl.innerText = "Error";
-        }
-
-    };
-
-    xhr.open('POST', 'api.php?action=mail', true);
-    xhr.send(JSON.stringify(mailData));
-});
-*/
-
-/*
-
-const mail = document.querySelector('.mail_botprotection');
-
-mail.each(function(i)
-    {
-        this.html("<a href=\"" + "mail" + "to:" + $(this).data("id") + "@" + $(this).data("server") + "\">" + '<span class="fa fa-envelope" aria-hidden="true"></span>' + "</a>");
-    }
-);
-});
-
-
-
-
-
-(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-    function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-    e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-    e.src='https://www.google-analytics.com/analytics.js';
-    r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-ga('create','UA-XXXXX-X','auto');ga('send','pageview');
-
-*/

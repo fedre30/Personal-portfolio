@@ -21,7 +21,6 @@ a {
   margin-bottom: 1vh;
   border: 1px solid white;
   border-radius: 100vw;
-  cursor: pointer;
   text-align: right; }
 
 .introLabel {
@@ -29,12 +28,12 @@ a {
   .introLabel.visible {
     width: 5vw;
     position: absolute;
-    right: 1vw;
+    right: 30px;
     font-family: "Lato", sans-serif;
     color: #D0A233;
     margin-top: -0.5vh;
     opacity: 1;
-    transition: opacity 0.2s ease; }
+    transition: opacity 0.1s ease; }
 
 .scrollTarget {
   --currentSection: 0;
@@ -101,9 +100,6 @@ a {
   .bgIcon img {
     width: 100%; }
 
-@media (max-width: 400px) {
-  .introduction {
-    margin: 0; } }
 .first {
   top: 85vh;
   left: 9vw; }
@@ -253,6 +249,9 @@ a {
   text-align: center; }
   .subtitle h5 {
     font-size: 1.8vw; }
+  .subtitle .emoji {
+    font-style: normal;
+    width: 100px; }
 
 .phaseTitle {
   font-family: "Bitter", serif;
@@ -331,16 +330,21 @@ a {
 
 .rectangle-1 {
   width: 90vw;
-  height: 45vh;
+  height: 60vh;
   background-color: rgba(176, 188, 196, 0.6);
   position: absolute;
-  top: -10vh; }
+  top: -10vh;
+  opacity: 0;
+  transition: opacity 1s ease; }
+
+.visible .rectangle-1 {
+  opacity: 1; }
 
 .video {
-  width: 30vw;
+  width: 40vw;
   position: absolute;
-  top: -15vh;
-  left: 5vw; }
+  top: -13vh;
+  left: 3vw; }
   .video video {
     width: 100%; }
 
@@ -364,7 +368,7 @@ a {
 .tagsContainer {
   position: absolute;
   top: 0;
-  left: 40vw; }
+  left: 45vw; }
 
 .tag {
   display: inline-block;
@@ -383,45 +387,42 @@ a {
 .projectParagraph {
   font-family: "Lato", sans-serif;
   font-weight: 300;
-  font-size: 1vw;
+  font-size: 1.2vw;
   color: white;
   width: 40vw;
   position: absolute;
   top: 10vh;
-  left: 40vw; }
+  left: 45vw;
+  line-height: 5vh; }
 
-.phases {
-  margin-top: 5vh; }
+.linkContainer {
+  width: 20vw;
+  height: 6vh;
+  position: absolute;
+  top: 30vh;
+  left: 15vw;
+  display: flex;
+  justify-content: space-around; }
 
-.phaseTitle-project {
+.linkTag {
   font-family: "Bitter", serif;
+  color: #394047;
   font-size: 2vw;
-  color: #D0A233;
-  text-align: center; }
+  text-decoration: none;
+  width: 20vw; }
 
-.dot {
+.linkTag:hover {
   color: #DCC7A9; }
 
-@media (max-width: 400px) {
-  .project-1 {
-    max-width: 400px; }
+.linkImage {
+  width: 5vw; }
+  .linkImage img {
+    width: 100%; }
 
-  .rectangle-1 {
-    display: none; }
-
-  .imageProject {
-    left: 0;
-    width: 50vw; }
-
-  .projectTitle {
-    left: 7vw;
-    top: -15vh; }
-
-  .phases {
-    display: none; } }
 .project-2 {
   height: 100vh;
-  width: 100vw; }
+  width: 100vw;
+  margin-top: -10vh; }
   .project-2 .projectTitle {
     font-family: "Abril Fatface", regular;
     font-size: 5vw;
@@ -439,15 +440,20 @@ a {
 .rectangle-2 {
   background-color: #DCC7A9;
   width: 90vw;
-  height: 45vh;
+  height: 60vh;
   position: absolute;
-  right: 0; }
+  right: 0;
+  opacity: 0;
+  transition: opacity 1s ease; }
+
+.visible .rectangle-2 {
+  opacity: 1; }
 
 .video-2 {
-  width: 30vw;
+  width: 40vw;
   position: absolute;
-  top: -10vh;
-  right: 10vw; }
+  top: -5vh;
+  right: 5vw; }
   .video-2 video {
     width: 100%; }
 
@@ -459,12 +465,37 @@ a {
 .projectParagraph2 {
   font-family: "Lato", sans-serif;
   font-weight: 300;
-  font-size: 1vw;
+  font-size: 1.2vw;
   color: #394047;
   width: 40vw;
   position: absolute;
   left: 15vw;
-  top: 20vh; }
+  top: 20vh;
+  line-height: 5vh; }
+
+.linkContainer-2 {
+  width: 15vw;
+  height: 6vh;
+  position: absolute;
+  top: 40vh;
+  right: 15vw;
+  display: flex;
+  justify-content: space-around; }
+
+.linkTag-2 {
+  font-family: "Bitter", serif;
+  color: #394047;
+  font-size: 2vw;
+  text-decoration: none;
+  width: 20vw; }
+
+.linkTag-2:hover {
+  color: #D0A233; }
+
+.linkImage-2 {
+  width: 5vw; }
+  .linkImage-2 img {
+    width: 100%; }
 
 .project-3 {
   width: 100vw;
@@ -492,21 +523,29 @@ a {
   height: 100vh; }
 
 .bioSection {
-  height: 50vh; }
-  .bioSection img {
-    width: 100%; }
+  height: 45vh; }
 
 .bioImage {
   opacity: 0;
   transform: translateX(-5vw);
   transition: transform 1s ease, opacity 1s ease; }
+  .bioImage img {
+    width: 100%;
+    background: white;
+    margin: 0 15px 15px;
+    padding: 10px 10px 10px;
+    text-align: center;
+    text-decoration: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    transform: translateZ(80px) scale(1);
+    transform-style: preserve-3d; }
 
 .visible .bioImage {
   transform: translateX(0);
   opacity: 1; }
 
 .bioText {
-  width: 30vw;
+  width: 35vw;
   font-family: "Lato", sans-serif;
   font-size: 1vw;
   color: white;
@@ -514,6 +553,11 @@ a {
   opacity: 0;
   transform: translateX(5vw);
   transition: transform 1s ease, opacity 1s ease; }
+  .bioText p {
+    margin-bottom: 1.5vh; }
+  .bioText .emoji {
+    font-size: 1.7vw;
+    margin-left: 0.3vw; }
 
 .visible .bioText {
   transform: translateX(0);
@@ -526,24 +570,26 @@ a {
 .highlight {
   color: #D0A233;
   font-weight: bold;
-  font-size: 1.3vw; }
+  font-size: 1.3vw;
+  margin: 2vh 0; }
 
 .contactContainer {
   display: flex;
-  width: 20vw;
+  width: 25vw;
   justify-content: space-around;
-  margin: 0 auto; }
+  margin: 5vh auto; }
 
 .contact {
   margin: 0 auto;
   padding-top: 3.5vh;
-  width: 40vw; }
+  width: 20vw; }
 
 .contactMe {
   font-family: "Lato", sans-serif;
   font-size: 1vw;
   color: white;
-  text-align: center; }
+  text-align: center;
+  letter-spacing: 0.1vw; }
   .contactMe .highlight {
     text-transform: uppercase; }
 
@@ -551,7 +597,7 @@ a {
   display: flex;
   justify-content: space-around;
   width: 60vw;
-  margin: 5vh auto; }
+  margin: 3vh auto; }
 
 .animojiContainer img {
   width: 110px; }
@@ -560,6 +606,13 @@ a {
   width: 2vw; }
   .logo-item img {
     width: 100%; }
+
+.copyright {
+  font-family: "Lato", sans-serif;
+  font-size: 0.7vw;
+  color: rgba(176, 188, 196, 0.6);
+  text-align: center;
+  margin-top: 5vh; }
 
 ::-webkit-scrollbar {
   display: none; }

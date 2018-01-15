@@ -12,11 +12,42 @@ $lato: 'Lato', sans-serif
 
 $sectionTitle: 5vw
 
+//MEDIA QUERIES
+
+$mobile-width: 480px
+$portrait-tablet-width: 768px
+$landscape-tablet-width: 960px
+$hd-width: 1280px
+$full-hd-width: 1920px
+
+//MIXINS
+
+@mixin mobile
+  @media (max-width: $mobile-width)
+    @content
+
+@mixin portrait-tablet
+  @media (min-width: #{$mobile-width}) and (max-width: #{$portrait-tablet-width})
+    @content
+
+@mixin landscape-tablet
+  @media (min-width: #{$portrait-tablet-width}) and (max-width: #{$landscape-tablet-width})
+    @content
+
+@mixin hd
+  @media (min-width: #{$landscape-tablet-width}) and (max-width: #{$hd-width})
+    @content
+
+@mixin full-hd
+  @media (min-width: #{$hd-width}) and (max-width: #{$full-hd-width})
+    @content
+
+
 //OTHERS
 
-$videoSize: 30vw
+$videoSize: 40vw
 $rectangleWidth: 90vw
-$rectangleHeight: 45vh
+$rectangleHeight: 60vh
 
 body
   background-color: $brey
@@ -46,7 +77,6 @@ a
   margin-bottom: 1vh
   border: 1px solid white
   border-radius: 100vw
-  cursor: pointer
   text-align: right
 
 
@@ -57,12 +87,13 @@ a
   &.visible
     width: 5vw
     position: absolute
-    right: 1vw
+    right: 30px
     font-family: $lato
     color: $mustard
     margin-top: -0.5vh
     opacity: 1
-    transition: opacity .2s ease
+    transition: opacity .1s ease
+
 
 
 
@@ -74,6 +105,8 @@ a
   margin-top: calc(-100vh * var(--currentSection))
   transition: margin-top 0.5s ease
   overflow: hidden
+
+
 
 // INTRODUCTION
 
@@ -144,9 +177,7 @@ a
   img
     width: 100%
 
-@media (max-width: 400px)
-  .introduction
-    margin: 0
+
 
 //ICONS POSITIONING
 
@@ -315,6 +346,10 @@ a
   h5
     font-size: 1.8vw
 
+  .emoji
+    font-style: normal
+    width: 100px
+
 .phaseTitle
   font-family: $bitter
   font-weight: 700
@@ -432,16 +467,25 @@ a
   background-color: $lightgrey
   position: absolute
   top: -10vh
+  opacity: 0
+  transition: opacity 1s ease
+
+.visible .rectangle-1
+  opacity: 1
 
 
 .video
   width: $videoSize
   position: absolute
-  top: -15vh
-  left: 5vw
+  top: -13vh
+  left: 3vw
+
 
   video
     width: 100%
+
+
+
 
 .projectTitle
   width: 50vw
@@ -462,12 +506,10 @@ a
 
 
 
-
-
 .tagsContainer
   position: absolute
   top: 0
-  left: 40vw
+  left: 45vw
 
 .tag
   display: inline-block
@@ -486,45 +528,40 @@ a
 .projectParagraph
   font-family: $lato
   font-weight: 300
-  font-size: 1vw
+  font-size: 1.2vw
   color: white
   width: 40vw
   position: absolute
   top: 10vh
-  left: 40vw
+  left: 45vw
+  line-height: 5vh
 
-.phases
-  margin-top: 5vh
+.linkContainer
+  width: 20vw
+  height: 6vh
+  position: absolute
+  top: 30vh
+  left: 15vw
+  display: flex
+  justify-content: space-around
 
-
-
-.phaseTitle-project
+.linkTag
   font-family: $bitter
+  color: $brey
   font-size: 2vw
-  color: $mustard
-  text-align: center
+  text-decoration: none
+  width: 20vw
 
-.dot
+.linkTag:hover
   color: $ivory
 
-@media (max-width: 400px)
 
-  .project-1
-    max-width: 400px
+.linkImage
+  width: 5vw
 
-  .rectangle-1
-    display: none
+  img
+    width: 100%
 
-  .imageProject
-    left: 0
-    width: 50vw
-
-  .projectTitle
-    left: 7vw
-    top: -15vh
-
-  .phases
-    display: none
 
 
 //PROJECT 2
@@ -532,6 +569,7 @@ a
 .project-2
   height: 100vh
   width: 100vw
+  margin-top: -10vh
 
 
   .projectTitle
@@ -555,12 +593,17 @@ a
   height: $rectangleHeight
   position: absolute
   right: 0
+  opacity: 0
+  transition: opacity 1s ease
+
+.visible .rectangle-2
+  opacity: 1
 
 .video-2
   width: $videoSize
   position: absolute
-  top: -10vh
-  right: 10vw
+  top: -5vh
+  right: 5vw
 
   video
     width: 100%
@@ -573,12 +616,43 @@ a
 .projectParagraph2
   font-family: $lato
   font-weight: 300
-  font-size: 1vw
+  font-size: 1.2vw
   color: $brey
   width: 40vw
   position: absolute
   left: 15vw
   top: 20vh
+  line-height: 5vh
+
+.linkContainer-2
+  width: 15vw
+  height: 6vh
+  position: absolute
+  top: 40vh
+  right: 15vw
+  display: flex
+  justify-content: space-around
+
+.linkTag-2
+  font-family: $bitter
+  color: $brey
+  font-size: 2vw
+  text-decoration: none
+  width: 20vw
+
+.linkTag-2:hover
+  color: $mustard
+
+
+.linkImage-2
+  width: 5vw
+
+  img
+    width: 100%
+
+
+
+
 
 //PROJECT 3
 
@@ -613,22 +687,34 @@ a
   height: 100vh
 
 .bioSection
-  height: 50vh
+  height: 45vh
 
-  img
-    width: 100%
 
 .bioImage
   opacity: 0
   transform: translateX(-5vw)
   transition: transform 1s ease, opacity 1s ease
 
+
+  img
+    width: 100%
+    background: white
+    margin: 0 15px 15px
+    padding: 10px 10px 10px
+    text-align: center
+    text-decoration: none
+    box-shadow: 0 4px 6px rgba(0,0,0,.3)
+    transform: translateZ(80px) scale(1)
+    transform-style: preserve-3d
+
+
+
 .visible .bioImage
   transform: translateX(0)
   opacity: 1
 
 .bioText
-  width: 30vw
+  width: 35vw
   font-family: $lato
   font-size: 1vw
   color: white
@@ -636,6 +722,13 @@ a
   opacity: 0
   transform: translateX(5vw)
   transition: transform 1s ease, opacity 1s ease
+
+  p
+    margin-bottom: 1.5vh
+
+  .emoji
+    font-size: 1.7vw
+    margin-left: 0.3vw
 
 .visible .bioText
   transform: translateX(0)
@@ -650,20 +743,22 @@ a
   color: $mustard
   font-weight: bold
   font-size: 1.3vw
+  margin: 2vh 0
+
 
 
   //CONTACTS
 
 .contactContainer
   display: flex
-  width: 20vw
+  width: 25vw
   justify-content: space-around
-  margin: 0 auto
+  margin: 5vh auto
 
 .contact
   margin: 0 auto
   padding-top: 3.5vh
-  width: 40vw
+  width: 20vw
 
 
 .contactMe
@@ -671,16 +766,18 @@ a
   font-size: 1vw
   color: white
   text-align: center
+  letter-spacing: 0.1vw
 
   .highlight
     text-transform: uppercase
+
 
 
 .logos
   display: flex
   justify-content: space-around
   width: 60vw
-  margin: 5vh auto
+  margin: 3vh auto
 
 .animojiContainer
 
@@ -693,6 +790,12 @@ a
   img
     width: 100%
 
+.copyright
+  font-family: $lato
+  font-size: 0.7vw
+  color: $lightgrey
+  text-align: center
+  margin-top: 5vh
 
 // SCROLLBAR
 
