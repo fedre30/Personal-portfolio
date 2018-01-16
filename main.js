@@ -53,10 +53,10 @@ function triggerSectionAnimations() {
 
     const sections = [
         document.querySelector('.introduction'),
-        document.querySelector('.workflow'),
         document.querySelector('.project-1'),
         document.querySelector('.project-2'),
         document.querySelector('.project-3'),
+        document.querySelector('.workflow'),
         document.querySelector('.about')
 
     ];
