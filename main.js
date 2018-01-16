@@ -33,10 +33,6 @@ bioImage.addEventListener('mousemove', function (ev) {
 
 
 
-
-
-
-
 // SCROLL
 
 const scrollTarget = document.querySelector('.scrollTarget');
