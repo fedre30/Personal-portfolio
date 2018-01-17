@@ -292,101 +292,6 @@ a
   .scrollImage
     width: 1vw
 
-// WORKFLOW
-
-.workflow
-  width: 100vw
-  height: 100vh
-
-.workflowSections
-  transform: translateY(10vh)
-  transition: transform 1s ease, opacity 1s ease
-  opacity: 0
-
-.visible .workflowSections
-  transform: translateY(0)
-  opacity: 1
-
-.sectionTitle
-  width: 100%
-  text-align: center
-  margin-top: 4vh
-
-  .sectionImage
-    width: 5vw
-    text-align: center
-    animation-name: spinning
-    animation-duration: 6s
-    animation-delay: 0s
-    animation-iteration-count: infinite
-    animation-timing-function: ease
-
-  @keyframes spinning
-    0%
-      transform: rotate(0deg)
-    60%
-      transform: rotate(360deg)
-    100%
-      transform: rotate(360deg)
-
-
-  h3
-    color: white
-    font-family: $abril
-    font-size: $sectionTitle
-    display: inline-block
-
-.subtitle
-  font-family: $lato
-  font-style: italic
-  color: $ivory
-  margin: 3vh 0 9vh 0
-  text-align: center
-
-  h5
-    font-size: 1.8vw
-
-  .emoji
-    font-style: normal
-    width: 100px
-
-.phaseTitle
-  font-family: $bitter
-  font-weight: 700
-  letter-spacing: 0.09vw
-  color: white
-  font-size: 1.2vw
-  text-align: center
-
-.phaseParagraph
-  font-family: $lato
-  font-weight: 300
-  color: $ivory
-  font-size: 1vw
-  margin-top: 5vh
-  line-height: 2.7vh
-
-.row img
-  width: 100%
-
-
-
-
-
-@media (max-width: 400px)
-
-
-  .subtitle
-    margin: 0
-
-  .phaseTitle
-    font-size: 2.5vw
-
-  .phaseParagraph
-    margin-top: 2vh
-    font-size: 2vw
-
-
 
 // PROJECTS
 
@@ -678,6 +583,177 @@ a
   background-color: $lightgrey
   position: absolute
   top: 10vh
+
+
+// WORKFLOW
+
+.workflow
+  width: 100vw
+  height: 100vh
+
+.workflowSections
+  transform: translateY(10vh)
+  transition: transform 1s ease, opacity 1s ease
+  opacity: 0
+  position: relative
+
+.visible .workflowSections
+  transform: translateY(0)
+  opacity: 1
+
+.sectionTitle
+  width: 100%
+  text-align: center
+  margin-top: 4vh
+
+  .sectionImage
+    width: 5vw
+    text-align: center
+    animation-name: spinning
+    animation-duration: 6s
+    animation-delay: 0s
+    animation-iteration-count: infinite
+    animation-timing-function: ease
+
+  @keyframes spinning
+    0%
+      transform: rotate(0deg)
+    60%
+      transform: rotate(360deg)
+    100%
+      transform: rotate(360deg)
+
+
+  h3
+    color: white
+    font-family: $abril
+    font-size: $sectionTitle
+    display: inline-block
+
+.subtitle
+  font-family: $lato
+  font-style: italic
+  color: $ivory
+  margin: 3vh 0 9vh 0
+  text-align: center
+
+  h5
+    font-size: 1.8vw
+
+  .emoji
+    font-style: normal
+    width: 100px
+
+.phaseTitle
+  font-family: $abril
+  font-weight: 700
+  letter-spacing: 0.09vw
+  color: white
+  font-size: 1.5vw
+
+
+
+.phaseParagraph
+  font-family: $lato
+  font-weight: lighter
+  color: $ivory
+  font-size: 1vw
+  margin-top: 2vh
+  line-height: 3vh
+
+
+.row img
+  width: 100%
+
+.phase-1
+  position: absolute
+  top: 5vh
+  left: 0
+
+.number
+  font-size: 3.5vw
+  color: transparentize($mustard, 0.3)
+  z-index: -100
+  position: absolute
+  top: -2.7vh
+  left: -0.7vw
+
+
+.path-1
+  width: 10vw
+  position: absolute
+  top: 10vh
+  left: 13vw
+  transform: rotate(0)
+
+.visible .path-1
+  transform: rotate(30deg)
+
+.path-2
+  width: 10vw
+  position: absolute
+  top: 40vh
+  left: 35vw
+  transform: rotate(0)
+
+.visible .path-2
+  transform: rotate(10deg)
+
+
+.path-3
+  width: 10vw
+  position: absolute
+  top: 25vh
+  left: 57vw
+  transform: rotate(0)
+
+.visible .path-3
+  transform: rotate(20deg)
+
+
+.paths
+  opacity: 0
+  transition: opacity 1s ease, transform 1s ease
+
+
+.visible .paths
+  opacity: 1
+
+
+
+
+
+  img
+    width: 100%
+
+.phase-2
+  position: absolute
+  top: 35vh
+  left: 15vw
+
+.phase-3
+  position: absolute
+  top: 20vh
+  left: 40vw
+
+.phase-4
+  position: absolute
+  top: 50vh
+  left: 60vw
+
+@media (max-width: 400px)
+
+
+  .subtitle
+    margin: 0
+
+  .phaseTitle
+    font-size: 2.5vw
+
+  .phaseParagraph
+    margin-top: 2vh
+    font-size: 2vw
+
 
 
 // ABOUT
