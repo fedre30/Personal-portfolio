@@ -10,103 +10,20 @@ $abril: 'Abril Fatface', regular
 $bitter: 'Bitter', serif
 $lato: 'Lato', sans-serif
 
-$sectionTitle: 5vw
 
-//MEDIA QUERIES
-
-$mobile-width: 480px
-$portrait-tablet-width: 768px
-$landscape-tablet-width: 960px
-$hd-width: 1280px
-$full-hd-width: 1920px
-
-//MIXINS
-
-@mixin mobile
-  @media (max-width: $mobile-width)
-    @content
-
-@mixin portrait-tablet
-  @media (min-width: #{$mobile-width}) and (max-width: #{$portrait-tablet-width})
-    @content
-
-@mixin landscape-tablet
-  @media (min-width: #{$portrait-tablet-width}) and (max-width: #{$landscape-tablet-width})
-    @content
-
-@mixin hd
-  @media (min-width: #{$landscape-tablet-width}) and (max-width: #{$hd-width})
-    @content
-
-@mixin full-hd
-  @media (min-width: #{$hd-width}) and (max-width: #{$full-hd-width})
-    @content
-
-
-//OTHERS
-
-$videoSize: 40vw
 $rectangleWidth: 90vw
-$rectangleHeight: 60vh
+$rectangleHeight: 45vh
+$videoSize: 80vw
+$sectionTitle: 10vw
+
 
 body
   background-color: $brey
 
 
+
 a
   text-decoration: none
-
-
-  //MENU
-
-.menuContainer
-  display: flex
-  justify-content: flex-end
-  flex-direction: column
-  position: fixed
-  top: 50vh
-  right: 1vw
-  transform: translateY(-50%)
-  z-index: 10000
-
-
-.menu-item
-  position: relative
-  width: 12px
-  height: 12px
-  margin-bottom: 1vh
-  border: 1px solid white
-  border-radius: 100vw
-  text-align: right
-
-
-
-.introLabel
-  opacity: 0
-
-  &.visible
-    width: 5vw
-    position: absolute
-    right: 30px
-    font-family: $lato
-    color: $mustard
-    margin-top: -0.5vh
-    opacity: 1
-    transition: opacity .1s ease
-
-
-
-
-
-//SCROLLTARGET
-
-.scrollTarget
-  --currentSection: 0
-  margin-top: calc(-100vh * var(--currentSection))
-  transition: margin-top 0.5s ease
-  overflow: hidden
-
-
 
 // INTRODUCTION
 
@@ -114,18 +31,18 @@ a
   width: 100vw
   height: 100vh
   text-align: center
-  //margin-bottom: 10vh
   position: relative
+  margin-bottom: 10vh
 
 .introductionTitle
   position: absolute
-  top: 33vh
-  left: 32vw
+  top: 40vh
+  left: 25vw
 
 .authorName
   font-family: $abril
   color: white
-  font-size: 5vw
+  font-size: 8vw
 
 
 .typewriter
@@ -159,7 +76,7 @@ a
 .profession
   font-family: $abril
   color: $mustard
-  font-size: 2.5vw
+  font-size: 4vw
   animation: professionAppear 1s ease
 
 .backgroundImage
@@ -276,22 +193,19 @@ a
 //SCROLL
 
 .scrollAction
-  width: 5vw
-  margin: 0 auto
-  position: absolute
-  bottom: 5vh
-  left: 48vw
+  width: 25vw
+  margin: -10vh auto
+
 
   .scroll
     text-transform: uppercase
     font-family: $bitter
-    font-size: 1vw
+    font-size: 3vw
     display: inline-block
     color: white
 
   .scrollImage
-    width: 1vw
-
+    width: 3vw
 
 // PROJECTS
 
@@ -301,11 +215,12 @@ a
 .sectionTitleProjects
   width: 100%
   text-align: center
-  padding-bottom: 20vh
+  padding-bottom: 10vh
+
 
 
   .sectionImage
-    width: 5vw
+    width: 8vw
     text-align: center
     animation: rotate-scale-up-diag-1 6s ease infinite
 
@@ -335,25 +250,11 @@ a
     margin-top: 3vh
 
 
-@media (max-width: 400px)
-  .projects
-    margin: 15vh
-
-
 // VIDEO PLAYER
 
 .videoPlayer
-  width: 100vw
+  width: 70vw
   height: 30vh
-  object-fit: cover
-  overflow: hidden
-  transform: translateY(-10vh)
-  transition: transform 1s ease
-
-
-.visible .videoPlayer
-  transform: translateY(0)
-
 
 
 
@@ -370,20 +271,17 @@ a
   width: $rectangleWidth
   height: $rectangleHeight
   background-color: $lightgrey
-  position: absolute
-  top: -10vh
-  opacity: 0
-  transition: opacity 1s ease
+  margin: 0 auto
 
-.visible .rectangle-1
-  opacity: 1
 
 
 .video
   width: $videoSize
   position: absolute
-  top: -13vh
-  left: 3vw
+  top: -10vh
+  left: 10vw
+
+
 
 
   video
@@ -395,74 +293,68 @@ a
 .projectTitle
   width: 50vw
   font-family: $abril
-  font-size: 5vw
+  font-size: 13vw
   color: $mustard
   position: absolute
-  top: -18vh
-  left: 65vw
+  top: 41vh
+  left: 15vw
   text-shadow: 0 3px 8px $brey
-  opacity: 0
-  transform: translateX(5vw)
-  transition: transform 1s ease, opacity 1s ease
-
-.visible .projectTitle
-  transform: translateX(0)
-  opacity: 1
-
 
 
 .tagsContainer
   position: absolute
-  top: 0
-  left: 45vw
+  top: 15vh
+  left: 20vw
+  display: flex
 
 .tag
   display: inline-block
-  width: 7vw
-  height: 3vh
+  width: 20vw
+  height: 2vh
   background-color: $brey
   color: white
   font-family: $bitter
-  font-size: 0.9vw
+  font-size: 2.5vw
   text-align: center
   padding-top: 0.5vh
-  border-radius: 0.3vw
+  border-radius: 1vw
   opacity: $tagOpacity
   margin-right: 1vw
 
 .projectParagraph
   font-family: $lato
   font-weight: 300
-  font-size: 1.2vw
+  font-size: 3vw
   color: white
-  width: 40vw
+  width: 70vw
   position: absolute
-  top: 10vh
-  left: 45vw
-  line-height: 5vh
+  top: 20vh
+  left: 20vw
+  line-height: 3vh
 
 .linkContainer
-  width: 20vw
+  width: 30vw
   height: 6vh
   position: absolute
-  top: 30vh
-  left: 15vw
+  top: 32vh
+  left: 60vw
   display: flex
-  justify-content: space-around
+  justify-content: space-between
 
 .linkTag
   font-family: $bitter
   color: $brey
-  font-size: 2vw
+  font-size: 4vw
   text-decoration: none
   width: 20vw
+  margin-top: 1.5vh
 
 .linkTag:hover
   color: $ivory
 
 
 .linkImage
-  width: 5vw
+  width: 10vw
 
   img
     width: 100%
@@ -478,13 +370,15 @@ a
 
 
   .projectTitle
+    width: 70vw
     font-family: $abril
-    font-size: 5vw
+    font-size: 13vw
     color: white
     position: absolute
-    left: 20vw
-    top: -7vh
+    top: 41vh
+    left: 10vw
     text-shadow: 0 3px 8px $brey
+
 
 
 .projectShowcase
@@ -496,61 +390,59 @@ a
   background-color: $ivory
   width: $rectangleWidth
   height: $rectangleHeight
-  position: absolute
-  right: 0
-  opacity: 0
-  transition: opacity 1s ease
+  margin: 0 auto
 
-.visible .rectangle-2
-  opacity: 1
+
+
 
 .video-2
   width: $videoSize
   position: absolute
-  top: -5vh
-  right: 5vw
+  top: -10vh
+  left: 10vw
 
   video
     width: 100%
 
 .tagsContainer2
   position: absolute
-  left: 38vw
-  top: 10vh
+  left: 30vw
+  top: 17vh
 
 .projectParagraph2
   font-family: $lato
   font-weight: 300
-  font-size: 1.2vw
+  font-size: 3vw
   color: $brey
-  width: 40vw
+  width: 70vw
   position: absolute
+  top: 22vh
   left: 15vw
-  top: 20vh
-  line-height: 5vh
+  line-height: 3vh
 
 .linkContainer-2
-  width: 15vw
+  width: 30vw
   height: 6vh
   position: absolute
-  top: 40vh
-  right: 15vw
+  top: 35vh
+  left: 60vw
   display: flex
-  justify-content: space-around
+  justify-content: space-between
 
 .linkTag-2
   font-family: $bitter
   color: $brey
-  font-size: 2vw
+  font-size: 4vw
   text-decoration: none
   width: 20vw
+  margin-top: 1.5vh
 
 .linkTag-2:hover
   color: $mustard
 
 
 .linkImage-2
-  width: 5vw
+  width: 10vw
 
   img
     width: 100%
@@ -567,14 +459,25 @@ a
   position: relative
 
   .projectTitle
-    width: 50vw
+    width: 100vw
     font-family: $abril
-    font-size: 5vw
+    font-size: 10vw
     color: $mustard
     position: absolute
-    top: - 17vh
-    left: 45vw
+    top: 42vh
+    left: 5vw
     text-shadow: 0 3px 8px $brey
+
+  .linkContainer
+    width: 80vw
+    position: absolute
+    top: 33vh
+    left: 30vw
+
+
+  .linkTag
+    width: 65vw
+    margin-top: 1vh
 
 
 .rectangle-3
@@ -589,25 +492,19 @@ a
 
 .workflow
   width: 100vw
-  height: 100vh
+  height: 120vh
+  margin-bottom: 10vh
 
 .workflowSections
-  transform: translateY(10vh)
-  transition: transform 1s ease, opacity 1s ease
-  opacity: 0
   position: relative
-
-.visible .workflowSections
-  transform: translateY(0)
-  opacity: 1
 
 .sectionTitle
   width: 100%
   text-align: center
-  margin-top: 4vh
+  margin: 5vh 0
 
   .sectionImage
-    width: 5vw
+    width: 8vw
     text-align: center
     animation-name: spinning
     animation-duration: 6s
@@ -627,97 +524,40 @@ a
   h3
     color: white
     font-family: $abril
-    font-size: $sectionTitle
+    font-size: 8vw
     display: inline-block
 
-.subtitle
-  font-family: $lato
-  font-style: italic
-  color: $ivory
-  margin: 3vh 0 9vh 0
-  text-align: center
 
-  h5
-    font-size: 1.8vw
 
-  .emoji
-    font-style: normal
-    width: 100px
 
 .phaseTitle
   font-family: $abril
   font-weight: 700
   letter-spacing: 0.09vw
   color: white
-  font-size: 1.5vw
+  font-size: 5vw
 
 
 
 .phaseParagraph
   font-family: $lato
-  font-weight: lighter
+  font-weight: 300
   color: $ivory
-  font-size: 1vw
+  font-size: 3.5vw
   margin-top: 2vh
-  line-height: 3vh
+  line-height: 3.5vh
+
+  .bold
+    font-weight: 400
+    color: $mustard
 
 
 .row img
   width: 100%
 
-.phase-1
-  position: absolute
-  top: 5vh
-  left: 0
-
 .number
-  font-size: 3.5vw
-  color: transparentize($mustard, 0.3)
-  z-index: -100
-  position: absolute
-  top: -2.7vh
-  left: -0.7vw
+  text-shadow: -2vw -1vh transparentize($mustard, 0.3)
 
-
-.path-1
-  width: 10vw
-  position: absolute
-  top: 10vh
-  left: 13vw
-  transform: rotate(0)
-
-.visible .path-1
-  transform: rotate(30deg)
-
-.path-2
-  width: 10vw
-  position: absolute
-  top: 40vh
-  left: 35vw
-  transform: rotate(0)
-
-.visible .path-2
-  transform: rotate(10deg)
-
-
-.path-3
-  width: 10vw
-  position: absolute
-  top: 25vh
-  left: 57vw
-  transform: rotate(0)
-
-.visible .path-3
-  transform: rotate(20deg)
-
-
-.paths
-  opacity: 0
-  transition: opacity 1s ease, transform 1s ease
-
-
-.visible .paths
-  opacity: 1
 
 
 
@@ -726,35 +566,10 @@ a
   img
     width: 100%
 
-.phase-2
-  position: absolute
-  top: 35vh
-  left: 15vw
 
-.phase-3
-  position: absolute
-  top: 20vh
-  left: 40vw
-
-.phase-4
-  position: absolute
-  top: 50vh
-  left: 60vw
-
-@media (max-width: 400px)
-
-
-  .subtitle
-    margin: 0
-
-  .phaseTitle
-    font-size: 2.5vw
-
-  .phaseParagraph
-    margin-top: 2vh
-    font-size: 2vw
-
-
+.path
+  width: 3vw
+  margin: 0 auto
 
 // ABOUT
 
@@ -762,12 +577,12 @@ a
   width: 100vw
   height: 100vh
 
+
 .bioSection
   height: 45vh
 
 
 .bioImage
-  opacity: 0
   transform: translateX(-5vw)
   transition: transform 1s ease, opacity 1s ease
 
@@ -785,30 +600,20 @@ a
 
 
 
-.visible .bioImage
-  transform: translateX(0)
-  opacity: 1
-
 .bioText
-  width: 35vw
+  width: 90vw
   font-family: $lato
-  font-size: 1vw
+  font-weight: 400
+  font-size: 3vw
   color: white
-  line-height: 3vh
-  opacity: 0
-  transform: translateX(5vw)
-  transition: transform 1s ease, opacity 1s ease
+  line-height: 2.5vh
 
   p
     margin-bottom: 1.5vh
 
   .emoji
-    font-size: 1.7vw
+    font-size: 5vw
     margin-left: 0.3vw
-
-.visible .bioText
-  transform: translateX(0)
-  opacity: 1
 
 
 .bold
@@ -818,31 +623,30 @@ a
 .highlight
   color: $mustard
   font-weight: bold
-  font-size: 1.3vw
+  font-size: 5vw
   margin: 2vh 0
+  width: 90vw
 
 
 
-  //CONTACTS
+//CONTACTS
 
 .contactContainer
-  display: flex
-  width: 25vw
-  justify-content: space-around
   margin: 5vh auto
 
 .contact
   margin: 0 auto
   padding-top: 3.5vh
-  width: 20vw
+  width: 70vw
 
 
 .contactMe
   font-family: $lato
-  font-size: 1vw
+  font-size: 3vw
   color: white
   text-align: center
   letter-spacing: 0.1vw
+
 
   .highlight
     text-transform: uppercase
@@ -856,25 +660,22 @@ a
   margin: 3vh auto
 
 .animojiContainer
+  text-align: center
 
   img
     width: 110px
 
 .logo-item
-  width: 2vw
+  width: 5vw
 
   img
     width: 100%
 
 .copyright
   font-family: $lato
-  font-size: 0.7vw
+  font-size: 2vw
   color: $lightgrey
   text-align: center
   margin-top: 5vh
 
-// SCROLLBAR
-
-::-webkit-scrollbar
-  display: none
 
