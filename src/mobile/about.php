@@ -1,6 +1,6 @@
 <!-- ABOUT  & CONTACTS-->
 
-<section class="about scrollSection">
+<section class="about scrollSection" id="about">
     <div class="sectionTitle aboutTitle">
         <img class="sectionImage" src="img/spiral_icon.png" alt="spiral">
         <h3>About</h3>

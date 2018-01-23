@@ -158,8 +158,49 @@ animoji.innerHTML = "<a href=\"" + "mail" + "to:" + mail.dataset.id + "@" + mail
 
 contactMe.innerHTML = "<a href=\"" + "mail" + "to:" + mail.dataset.id + "@" + mail.dataset.server + "\">" + '<span class="highlight">contact me</span>' + "</a>";
 
+/*
+
+// YOUTUBE
+
+
+//YOUTUBE PLAYER
+var tag = document.createElement('script');
+
+tag.src = "https://www.youtube.com/iframe_api";
+var firstScriptTag = document.getElementsByTagName('script')[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+
+function  setupYoutubePlayer(el, videoId){
+    function onReady(evt) {
+        evt.target.playVideo();
+    }
+    function onStateChange(evt) {
+        // if(evt.data === YT.PlayerState.ENDED){
+        //     player.loadVideoById(videoId);
+        // }
+    }
+
+    const player = new YT.Player(el, {
+        events: { onReady, onStateChange },
+        height: 400,
+        playerVars: { autoplay: 1, controls: 0, disablekb: 1, enablejsapi: 1, loop: 1, modestbranding: 1, playlist: videoId, rel: 0, showinfo: 0 },
+        videoId: videoId,
+        width: '100%',
+    });
+}
+
+function onYouTubeIframeAPIReady() {
+    const players = document.querySelectorAll('[data-youtube-player]');
+
+    for(let i = 0; i < players.length; i++){
+        const player = players[i];
+        setupYoutubePlayer(player, player.dataset.youtubePlayer);
+    }
+}
 
 
 
 
 
+*/

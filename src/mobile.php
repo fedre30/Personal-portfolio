@@ -12,6 +12,8 @@ include 'mobile/head.php';
 
 <div class="scrollTarget">
 
+    <?php include 'mobile/menu_burger.php'; ?>
+
     <?php include 'mobile/introduction.php'; ?>
 
     <?php include 'mobile/projects.php'; ?>
@@ -21,7 +23,7 @@ include 'mobile/head.php';
     <?php include 'mobile/about.php'; ?>
 
 </div>
-<script src="../public/lethargy.min.js"></script>
-<script src="../public/main_mobile.js"></script>
+<script src="lethargy.min.js"></script>
+<script src="main_mobile.js"></script>
 </body>
 </html

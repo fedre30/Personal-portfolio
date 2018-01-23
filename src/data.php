@@ -11,8 +11,9 @@ $projects = [
         'name' => 'Fanhub',
         'id' => 'Fanhub',
         'tags' => ['Team Project', 'Javascript', 'Node.js'],
-        'description' => 'A Fan Films’ streaming Website created during an intentive week at HETIC (Web School). I coded the Front-end features in Javascript and the upload film section in Node.JS.',
+        'description' => 'A Fan Films’ streaming Website created during an intensive week at HETIC (Web School).<br>The main purpose of the platform was to build a solid community of Fan Films and give the opportunity to users to upload their own film.<br>I coded some Front-end features in Javascript and the upload film section in Node.JS.',
         'video' => 'video/fanhub',
+        'videoId' => 'fH3dwwi6V4w',
         'image' => 'img/mockup_fanhub.jpg',
         'logoLink' => 'img/github_dark.svg',
         'link' => 'https://github.com/fedre30/Fanhub',
@@ -24,8 +25,9 @@ $projects = [
         'name' => 'Jelly Dodge',
         'id' => 'Jelly',
         'tags' => ['Team Project', 'Javascript'],
-        'description' => 'Brick game created during a sleepless night at HETIC. We were a team composed by three designers and two JS developers. The other developer and I coded the game in Javascript using Oriented Object Programmation.',
+        'description' => 'Brick game created during a sleepless night at HETIC. We were a team composed by three designers and two JS developers.<br> Gameplay was coded in Javascript using Oriented Object Programmation.<br>All graphic elements are implemented using Canvas API. ',
         'video' => 'video/jelly_dodge',
+        'videoId' => 'rKEjLRAh_Q4',
         'image' => 'img/mockup_jellydodge.jpg',
         'logoLink' => 'img/github_dark.svg',
         'link' => 'https://github.com/fedre30/Jelly-Dodge',
@@ -38,8 +40,9 @@ $projects = [
         'name' => 'Nespresso',
         'id' => 'Nespresso',
         'tags' => ['Solo Project', 'UX/UI'],
-        'description' => 'UX Design project that consists on improving User Experience of Nespresso Website. Wireframe was created on Sketch and protoyped on InVision.',
+        'description' => 'UX Design project that consists on improving User Experience of Nespresso Website.<br>As current Nespresso website appears to be dark and messy, I deliberately chose to light design up and simplify interactions within the website. Wireframe was created on Sketch and protoyped on InVision.',
         'video' => 'video/nespresso',
+        'videoId' => 'HPe67ivNygA',
         'image' => 'img/mockup_nespresso.jpg',
         'logoLink' => 'img/invision.svg',
         'link' => 'https://invis.io/WYENGG0GQ',
@@ -77,11 +80,11 @@ $phases = [
         'text' => [
             [
                 'type' => 'text',
-                'content' => 'Behind every smart solution there’s research and analysis : in order toimprove User Experience, Webdesigners and developers have to build a solid website  structure but also look for',
+                'content' => 'Behind every smart solution, we can find research and analysis : in order to improve User Experience, Webdesigners and developers have to build a solid website  structure but also look for',
             ],
             [
                 'type' => 'span',
-                'content' => 'details that make the difference',
+                'content' => 'details that make the difference.',
             ],
 
         ]
@@ -112,12 +115,17 @@ $phases = [
         'text' => [
             [
                 'type' => 'text',
-                'content' => 'The development of a website, derivated from its design, is the last but not the final phase of this process.  Yes, it’s about coding.  But bringing a project to life means to through tests, updates, reviews and so on',
+                'content' => 'The development of a website, derivated from its design, is the last but not the final phase of this process.  Yes, it’s about coding.  But bringing a project to life means to ',
             ],
             [
                 'type' => 'span',
                 'content' => 'let it live as long as possible',
             ],
+
+            [
+                'type' => 'text',
+                'content'=>'through tests, updates, reviews and so on.'
+            ]
 
         ]
 
@@ -134,8 +142,16 @@ $paragraphs = [
     [
         [
             'type' => 'text',
-            'content' => 'I\'m a 22 years old italian girl living her dream in Paris as a decadent
-                philosopher and ',
+            'content' => 'I\'m a 22 years old student at ',
+        ],
+        [
+            'type' => 'span',
+            'content' => 'HETIC',
+            'class' => 'highlight'
+        ],
+        [
+            'type' => 'text',
+            'content' => ', living my dream in Paris as a decadent philosopher ',
         ],
         [
             'type' => 'span',

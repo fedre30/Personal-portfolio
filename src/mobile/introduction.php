@@ -2,7 +2,7 @@
 
 <header>
     <div class="introduction scrollSection">
-        <div class="introductionTitle">
+        <div class="introductionTitle" id="introduction">
             <div class="typewriter"><h2 class="authorName"><?= $title ?></h2></div>
             <h3 class="profession"><?= $profession ?></h3>
         </div>

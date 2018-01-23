@@ -21,22 +21,25 @@ a {
   margin-bottom: 1vh;
   border: 1px solid white;
   border-radius: 100vw;
-  text-align: right;
   cursor: pointer; }
 
 .introLabel {
+  display: inline-block;
+  position: absolute;
+  right: 22px;
   opacity: 0;
-  width: 0; }
+  font-family: "Lato", sans-serif;
+  font-size: 1.2em;
+  font-weight: 500;
+  color: #D0A233;
+  transform: translateX(40px);
+  transition: all 0.4s ease;
+  width: 140px;
+  top: -9px;
+  text-align: right; }
   .introLabel.visible {
-    width: 5vw;
-    position: absolute;
-    right: 30px;
-    font-family: "Lato", sans-serif;
-    font-weight: 500;
-    color: #D0A233;
-    margin-top: -0.5vh;
     opacity: 1;
-    transition: opacity 0.1s ease; }
+    transform: translateX(0); }
 
 .scrollTarget {
   --currentSection: 0;
@@ -654,15 +657,14 @@ a {
   width: 40vw; }
 
 .contactContainer {
-  display: flex;
-  width: 25vw;
-  justify-content: space-around;
-  margin: 5vh auto; }
+  width: 80vw;
+  margin: 10vh auto 0 auto;
+  text-align: center; }
 
 .contact {
-  margin: 0 auto;
   padding-top: 3.5vh;
-  width: 20vw; }
+  transform: translateY(-50%);
+  display: inline-block; }
 
 .contactMe {
   font-family: "Lato", sans-serif;
@@ -677,7 +679,7 @@ a {
   display: flex;
   justify-content: space-around;
   width: 60vw;
-  margin: 3vh auto; }
+  margin: 1vh auto 1vh auto; }
 
 .animojiContainer img {
   width: 110px; }
@@ -692,7 +694,7 @@ a {
   font-size: 0.7vw;
   color: rgba(176, 188, 196, 0.6);
   text-align: center;
-  margin-top: 5vh; }
+  margin-top: 1vh; }
 
 ::-webkit-scrollbar {
   display: none; }

@@ -29,19 +29,19 @@
     </div>
 
     <div class="contactContainer">
-        <div class="contact"><p class="contactMe"> ~ Feel free to <a href="" class="contact_mail"><span class="highlight">contact me</span></a></p></div>
-        <div class="animojiContainer">
+        <span class="contact"><span class="contactMe"> ~ Feel free to <a href="" class="contact_mail"><span class="highlight">contact me</span></a></span></span>
+        <span class="animojiContainer">
             <a class="animoji_mail" href="" ><img src="img/Animoji.gif"></a>
-        </div>
+        </span>
     </div>
 
     <div class="logos">
-        <div class="logo-item"><a class="mail_botprotection" data-displayed-id="alfanofederica95" data-id="alfanofederica95+contact" data-server="gmail.com"><img src="img/mail.svg" alt=""></a></div>
-        <div class="logo-item"><a href="https://github.com/fedre30" target="_blank"><img src="img/github.svg" alt=""></a></div>
-        <div class="logo-item"><a href="https://codepen.io/alfanofederica/" target="_blank"><img src="img/codepen.svg" alt=""></a></div>
-        <div class="logo-item"><a href="https://www.facebook.com/federica.alfano.18" target="_blank"><img src="img/facebook.svg" alt=""></a></div>
-        <div class="logo-item"><a href="https://www.linkedin.com/in/federicaalfano/" target="_blank"><img src="img/linkedin.svg" alt=""></a></div>
-        <div class="logo-item"><a href="img/FedericaAlfano_CV.pdf" target="_blank"><img src="img/resume.svg" alt=""></a></div>
+        <span class="logo-item"><a class="mail_botprotection" data-displayed-id="alfanofederica95" data-id="alfanofederica95+contact" data-server="gmail.com"><img src="img/mail.svg" alt=""></a></span>
+        <span class="logo-item"><a href="https://github.com/fedre30" target="_blank"><img src="img/github.svg" alt=""></a></span>
+        <span class="logo-item"><a href="https://codepen.io/alfanofederica/" target="_blank"><img src="img/codepen.svg" alt=""></a></span>
+        <span class="logo-item"><a href="https://www.facebook.com/federica.alfano.18" target="_blank"><img src="img/facebook.svg" alt=""></a></span>
+        <span class="logo-item"><a href="https://www.linkedin.com/in/federicaalfano/" target="_blank"><img src="img/linkedin.svg" alt=""></a></span>
+        <span class="logo-item"><a href="img/FedericaAlfano_CV.pdf" target="_blank"><img src="img/resume.svg" alt=""></a></span>
     </div>
     <p class="copyright">©Federica Alfano 2018</p>
 </section>

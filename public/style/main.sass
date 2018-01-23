@@ -22,10 +22,6 @@ $full-hd-width: 1920px
 
 //MIXINS
 
-@mixin mobile
-  @media (max-width: $mobile-width)
-    @content
-
 @mixin portrait-tablet
   @media (min-width: #{$mobile-width}) and (max-width: #{$portrait-tablet-width})
     @content
@@ -77,25 +73,29 @@ a
   margin-bottom: 1vh
   border: 1px solid white
   border-radius: 100vw
-  text-align: right
   cursor: pointer
 
 
 
+
 .introLabel
+  display: inline-block
+  position: absolute
+  right: 22px
   opacity: 0
-  width: 0
+  font-family: $lato
+  font-size: 1.2em
+  font-weight: 500
+  color: $mustard
+  transform: translateX(40px)
+  transition: all .4s ease
+  width: 140px
+  top: -9px
+  text-align: right
 
   &.visible
-    width: 5vw
-    position: absolute
-    right: 30px
-    font-family: $lato
-    font-weight: 500
-    color: $mustard
-    margin-top: -0.5vh
     opacity: 1
-    transition: opacity .1s ease
+    transform: translateX(0)
 
 
 
@@ -842,15 +842,14 @@ a
   //CONTACTS
 
 .contactContainer
-  display: flex
-  width: 25vw
-  justify-content: space-around
-  margin: 5vh auto
+  width: 80vw
+  margin: 10vh auto 0 auto
+  text-align: center
 
 .contact
-  margin: 0 auto
   padding-top: 3.5vh
-  width: 20vw
+  transform: translateY(-50%)
+  display: inline-block
 
 
 .contactMe
@@ -870,7 +869,7 @@ a
   display: flex
   justify-content: space-around
   width: 60vw
-  margin: 3vh auto
+  margin: 1vh auto 1vh auto
 
 .animojiContainer
 
@@ -888,7 +887,7 @@ a
   font-size: 0.7vw
   color: $lightgrey
   text-align: center
-  margin-top: 5vh
+  margin-top: 1vh
 
 // SCROLLBAR
 

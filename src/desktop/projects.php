@@ -12,14 +12,15 @@
     <section class="project-<?=$index+1?> scrollSection">
         <?php if ($index % 2 == 0) { ?>
             <div class="rectangle-1"></div>
-            <div class="video">
-                <video class="videoPlayer" autoplay muted loop>
-                    <img src="<?=$project['image']?>" alt="mockup">
-                    <source src="<?=$project['video']?>.vp8" type="video/vp8" />
-                    <source src="<?=$project['video']?>.mp4" type="video/mp4" />
-                </video>
 
+            <div class="video">
+                <video class="videoPlayer" autoplay loop muted poster="<?= $project['image'] ?>">
+                    <img src="<?= $project['image'] ?>" alt="mockup">
+                    <!--<source src="<?= $project['video'] ?>.vp8" type="video/vp8" />-->
+                    <source src="<?= $project['video'] ?>.mp4" type="video/mp4" />
+                </video>
             </div>
+
             <h3 class="projectTitle"><?=$project['name']?></h3>
             <div class="tagsContainer">
                 <?php foreach ($project['tags'] as $tag){ ?>
@@ -38,14 +39,15 @@
         <?php } else { ?>
             <div class="projectShowcase">
                 <div class="rectangle-2"></div>
-                <div class="video-2">
-                    <video class="videoPlayer" autoplay muted loop>
-                        <img src="<?=$project['image']?>" alt="mockup">
-                        <source src="<?=$project['video']?>.mp4" type="video/vp8" />
-                        <source src="<?=$project['video']?>.vp8" type="video/mp4" />
 
+                <div class="video-2">
+                    <video class="videoPlayer" autoplay muted loop poster="<?= $project['image'] ?>">
+                        <img src="<?= $project['image'] ?>" alt="mockup">
+                        <source src="<?= $project['video'] ?>.vp8" type="video/vp8" />
+                        <source src="<?= $project['video'] ?>.mp4" type="video/mp4" />
                     </video>
                 </div>
+
                 <h3 class="projectTitle"><?=$project['name']?></h3>
                 <div class="tagsContainer2">
                     <?php foreach ($project['tags'] as $tag){ ?>

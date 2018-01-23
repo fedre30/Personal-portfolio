@@ -1,7 +1,7 @@
 
 <!-- WORKFLOW -->
 
-<section class="workflow scrollSection">
+<section class="workflow scrollSection" id="workflow">
     <div class="sectionTitle">
         <img class="sectionImage" src="img/spiral_icon.png" alt="spiral">
         <h3>Workflow Philosophy</h3>
@@ -31,11 +31,6 @@
                 </p>
             </div>
             <?php } ?>
-            <div class="path-1 paths"><img src="img/Path.svg"></div>
-
-            <div class="path-2 paths"><img src="img/path_2.svg"></div>
-
-            <div class="path-3 paths"><img src="img/Path.svg"></div>
 
         </div>
     </div>
