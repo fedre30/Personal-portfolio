@@ -1,0 +1,29 @@
+{
+  "name": "portfolio_code",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fedre30/Personal-portfolio.git"
+  },
+  "author": "Federica Alfano",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fedre30/Personal-portfolio/issues"
+  },
+  "homepage": "https://github.com/fedre30/Personal-portfolio#readme",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^7.0.1",
+    "gulp-cli": "^2.0.1",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.6.4",
+    "node-sass": "^4.7.2"
+  }
+}

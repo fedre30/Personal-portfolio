@@ -108,8 +108,9 @@ a
 .scrollTarget
   --currentSection: 0
   margin-top: calc(-100vh * var(--currentSection))
-  transition: margin-top .7s ease
+  transition: all .7s ease
   overflow: hidden
+  opacity: 1
 
 
 
@@ -119,8 +120,8 @@ a
   width: 100vw
   height: 100vh
   text-align: center
-  //margin-bottom: 10vh
   position: relative
+
 
 .introductionTitle
   position: absolute
@@ -296,6 +297,37 @@ a
 
   .scrollImage
     width: 1vw
+    -webkit-animation: wobble-hor-bottom 6s infinite
+    animation: wobble-hor-bottom 6s infinite
+
+
+@-webkit-keyframes wobble-hor-bottom
+  0%,
+  100%
+    -webkit-transform: translateX(0%)
+    transform: translateX(0%)
+    -webkit-transform-origin: 50% 50%
+    transform-origin: 50% 50%
+
+  15%
+    -webkit-transform: translateX(-30px) rotate(-6deg)
+    transform: translateX(-10px) rotate(-6deg)
+
+  30%
+    -webkit-transform: translateX(15px) rotate(6deg)
+    transform: translateX(5px) rotate(6deg)
+
+  45%
+    -webkit-transform: translateX(-15px) rotate(-3.6deg)
+    transform: translateX(-5px) rotate(-3.6deg)
+
+  60%
+    -webkit-transform: translateX(0%)
+    transform: translateX(0%)
+    -webkit-transform-origin: 50% 50%
+    transform-origin: 50% 50%
+
+
 
 
 // PROJECTS
@@ -372,8 +404,8 @@ a
   background-color: $lightgrey
   position: absolute
   top: -10vh
-  opacity: 0
   transition: opacity 1s ease
+
 
 .visible .rectangle-1
   opacity: 1
@@ -717,7 +749,7 @@ a
 
 .paths
   opacity: 0
-  transition: opacity 1s ease, transform 1s ease
+  transition: opacity 2s ease, transform 2s ease
 
 
   img
@@ -727,17 +759,6 @@ a
 
 .visible .paths
   opacity: 1
-  stroke-dasharray: 1000
-  stroke-dashoffset: 1000
-  animation: dash 5s linear alternate infinite
-
-@keyframes dash
-  from
-    stroke-dashoffset: 1000
-
-  to
-    stroke-dashoffset: 0
-
 
 
 .phase-2

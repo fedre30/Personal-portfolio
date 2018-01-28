@@ -81,6 +81,7 @@ label[for="hamburger-toggle"]
     display: block
     content: ' '
     background-color: inherit
+    text-align: right
     width: 100%
     height: 3px
     transform: translateY(7px)
@@ -301,6 +302,7 @@ label[for="hamburger-toggle"]
   margin: -10vh auto
 
 
+
   .scroll
     text-transform: uppercase
     font-family: $bitter
@@ -310,6 +312,37 @@ label[for="hamburger-toggle"]
 
   .scrollImage
     width: 3vw
+    -webkit-animation: wobble-hor-bottom 6s infinite
+    animation: wobble-hor-bottom 6s infinite
+
+
+@-webkit-keyframes wobble-hor-bottom
+  0%,
+  100%
+    -webkit-transform: translateX(0%)
+    transform: translateX(0%)
+    -webkit-transform-origin: 50% 50%
+    transform-origin: 50% 50%
+
+  15%
+    -webkit-transform: translateX(-30px) rotate(-6deg)
+    transform: translateX(-10px) rotate(-6deg)
+
+  30%
+    -webkit-transform: translateX(15px) rotate(6deg)
+    transform: translateX(5px) rotate(6deg)
+
+  45%
+    -webkit-transform: translateX(-15px) rotate(-3.6deg)
+    transform: translateX(-5px) rotate(-3.6deg)
+
+  60%
+    -webkit-transform: translateX(0%)
+    transform: translateX(0%)
+    -webkit-transform-origin: 50% 50%
+    transform-origin: 50% 50%
+
+
 
 // PROJECTS
 
@@ -426,7 +459,7 @@ label[for="hamburger-toggle"]
 .projectParagraph
   font-family: $lato
   font-weight: 300
-  font-size: 1.1em
+  font-size: 1em
   color: white
   width: 70vw
   position: absolute
@@ -438,7 +471,7 @@ label[for="hamburger-toggle"]
   width: 30vw
   height: 6vh
   position: absolute
-  top: 45vh
+  top: 50vh
   left: 35vw
   display: flex
   justify-content: space-between
@@ -526,7 +559,7 @@ label[for="hamburger-toggle"]
   width: 30vw
   height: 6vh
   position: absolute
-  top: 45vh
+  top: 50vh
   left: 35vw
   display: flex
   justify-content: space-between

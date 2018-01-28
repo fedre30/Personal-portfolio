@@ -95,9 +95,9 @@ function setCurrentSection(section) {
 const lethargy = new Lethargy();
 
 window.addEventListener('wheel', function (e) {
-    event.preventDefault();
+    e.preventDefault();
 
-    if(lethargy.check(e) === false){
+    if(lethargy.check(e) === false) {
         return;
     }
 
@@ -108,7 +108,7 @@ window.addEventListener('wheel', function (e) {
         }
 
         let newSectionCounter = sectionCounter;
-        newSectionCounter += event.wheelDelta < 0 ? 1 : -1;
+        newSectionCounter += (e.wheelDelta || -e.deltaY) < 0 ? 1 : -1;
         newSectionCounter = Math.min(Math.max(0, newSectionCounter), sections.length - 2);
 
 
@@ -120,7 +120,6 @@ window.addEventListener('wheel', function (e) {
 
 for(let i = 0; i < dots.length; i++){
     dots[i].addEventListener('click', function () {
-        console.log(i);
         setCurrentSection(i);
     });
 }
@@ -152,55 +151,10 @@ const mail = document.querySelector(".mail_botprotection");
 const animoji = document.querySelector('.animoji_mail');
 const contactMe = document.querySelector('.contact_mail');
 
-mail.innerHTML = "<a href=\"" + "mail" + "to:" + mail.dataset.id + "@" + mail.dataset.server + "\">" + '<img src="img/mail.svg" alt="mail">' + "</a>";
-
-animoji.innerHTML = "<a href=\"" + "mail" + "to:" + mail.dataset.id + "@" + mail.dataset.server + "\">" + '<img src="img/Animoji.gif" alt="animoji">' + "</a>";
-
-contactMe.innerHTML = "<a href=\"" + "mail" + "to:" + mail.dataset.id + "@" + mail.dataset.server + "\">" + '<span class="highlight">contact me</span>' + "</a>";
-
-/*
-
-// YOUTUBE
-
-
-//YOUTUBE PLAYER
-var tag = document.createElement('script');
-
-tag.src = "https://www.youtube.com/iframe_api";
-var firstScriptTag = document.getElementsByTagName('script')[0];
-firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-
-
-function  setupYoutubePlayer(el, videoId){
-    function onReady(evt) {
-        evt.target.playVideo();
-    }
-    function onStateChange(evt) {
-        // if(evt.data === YT.PlayerState.ENDED){
-        //     player.loadVideoById(videoId);
-        // }
-    }
-
-    const player = new YT.Player(el, {
-        events: { onReady, onStateChange },
-        height: 400,
-        playerVars: { autoplay: 1, controls: 0, disablekb: 1, enablejsapi: 1, loop: 1, modestbranding: 1, playlist: videoId, rel: 0, showinfo: 0 },
-        videoId: videoId,
-        width: '100%',
-    });
-}
-
-function onYouTubeIframeAPIReady() {
-    const players = document.querySelectorAll('[data-youtube-player]');
-
-    for(let i = 0; i < players.length; i++){
-        const player = players[i];
-        setupYoutubePlayer(player, player.dataset.youtubePlayer);
-    }
-}
+mail.href = "mail" + "to:" + mail.dataset.id + "@" + mail.dataset.server;
+animoji.href = "mail" + "to:" + mail.dataset.id + "@" + mail.dataset.server;
+contactMe.href = "mail" + "to:" + mail.dataset.id + "@" + mail.dataset.server;
 
 
 
 
-
-*/
