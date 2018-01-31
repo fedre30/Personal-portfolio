@@ -2,11 +2,16 @@ const gulp = require('gulp');
 const babel = require('gulp-babel');
 const sass = require('gulp-sass');
 const sourcemaps = require('gulp-sourcemaps');
+const cleanCSS = require('gulp-clean-css');
 
-gulp.task('default', ['desktop', 'mobile', 'sass', 'sass-mobile']);
+
+// DEFAULT TASKS
+gulp.task('default', ['desktop', 'mobile', 'sass', 'sass-mobile', 'minify-css', 'minify-css-mobile']);
 gulp.task('default:watch', ['default', 'desktop:watch', 'mobile:watch', 'sass:watch', 'sass-mobile:watch']);
 
 
+
+// BABEL
 const babelOptions = {
     minified: true,
     presets: ['env']
@@ -57,4 +62,16 @@ gulp.task('sass:watch', function () {
 
 gulp.task('sass-mobile:watch', function () {
     gulp.watch('public/style/main_mobile.sass', ['sass-mobile']);
+});
+
+gulp.task('minify-css', () => {
+    return gulp.src('styles/main.css')
+        .pipe(cleanCSS({compatibility: 'ie8'}))
+        .pipe(gulp.dest('public/style'));
+});
+
+gulp.task('minify-css-mobile', () => {
+    return gulp.src('styles/main_mobile.css')
+        .pipe(cleanCSS({compatibility: 'ie8'}))
+        .pipe(gulp.dest('public/style'));
 });

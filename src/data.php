@@ -11,7 +11,7 @@ $projects = [
         'name' => 'Fanhub',
         'id' => 'Fanhub',
         'tags' => ['Team Project', 'Javascript', 'Node.js'],
-        'description' => 'A Fan Films’ streaming Website created during an intensive week at HETIC (Web School).<br>The main purpose of the platform was to build a solid community of Fan Films and give the opportunity to users to upload their own film.<br>I coded some Front-end features in Javascript and the upload film section in Node.JS.',
+        'description' => 'A Fan Films’ streaming Website created during an intensive week at HETIC (Web School).<br>The main purpose of the platform was building a solid community of Fan Films and giving the opportunity to users to upload their own film.<br>I coded some Front-end features in Javascript and the upload film section in Node.JS.',
         'video' => 'video/fanhub',
         'videoId' => 'fH3dwwi6V4w',
         'image' => 'img/mockup_fanhub.jpg',
@@ -80,7 +80,7 @@ $phases = [
         'text' => [
             [
                 'type' => 'text',
-                'content' => 'Behind every smart solution, we can find research and analysis : in order to improve User Experience, Webdesigners and developers have to build a solid website  structure but also look for',
+                'content' => 'Behind every smart solution, we can find research and analysis : in order to improve User Experience, Webdesigners and developers should build a solid website  structure but also look for',
             ],
             [
                 'type' => 'span',
@@ -96,7 +96,7 @@ $phases = [
         'text' => [
             [
                 'type' => 'text',
-                'content' => 'Now, after research and Data collection, we have all the tools to find ',
+                'content' => 'After research and Data collection, we have all the tools to find ',
             ],
             [
                 'type' => 'span',
@@ -104,7 +104,7 @@ $phases = [
             ],
             [
                 'type' => 'text',
-                'content' => 'It consists on designing a web product that could be represent what average user wants and expects.',
+                'content' => 'It consists on designing a web product that could represent what average user fancies and expects.',
             ],
         ]
     ],
