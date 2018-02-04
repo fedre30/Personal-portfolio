@@ -77,6 +77,11 @@ function triggerSectionAnimations() {
 
 
 function setCurrentSection(section) {
+    if(sectionIsAnimating === true){
+        return;
+    }
+
+    section = Math.min(Math.max(0, section), sections.length - 2);
     if(section !== sectionCounter) {
         sectionCounter = section;
         scrollTarget.style = '--currentSection: ' + section;
@@ -94,6 +99,8 @@ function setCurrentSection(section) {
 
 const lethargy = new Lethargy();
 
+
+
 window.addEventListener('wheel', function (e) {
     e.preventDefault();
 
@@ -101,20 +108,11 @@ window.addEventListener('wheel', function (e) {
         return;
     }
 
-    if(window.innerWidth > 480){
-
-        if(sectionIsAnimating === true){
-            return;
-        }
-
-        let newSectionCounter = sectionCounter;
-        newSectionCounter += (e.wheelDelta || -e.deltaY) < 0 ? 1 : -1;
-        newSectionCounter = Math.min(Math.max(0, newSectionCounter), sections.length - 2);
+    let newSectionCounter = sectionCounter;
+    newSectionCounter += (e.wheelDelta || -e.deltaY) < 0 ? 1 : -1;
 
 
-        setCurrentSection(newSectionCounter);
-    }
-
+    setCurrentSection(newSectionCounter);
 
 });
 
@@ -125,6 +123,20 @@ for(let i = 0; i < dots.length; i++){
 }
 
 refreshSectionDots(sectionCounter);
+
+document.addEventListener('keydown', function (e) {
+    if([32, 38, 40].indexOf(e.keyCode) > -1) {
+        e.preventDefault();
+
+        const isUp = e.keyCode === 38;
+
+
+        setCurrentSection(sectionCounter + (isUp ? -1 : 1));
+    }
+});
+
+
+
 
 
 //MENU
