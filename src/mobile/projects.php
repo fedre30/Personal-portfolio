@@ -14,7 +14,7 @@
             <div class="rectangle-1"></div>
 
             <div class="video">
-                <video class="videoPlayer" autoplay muted loop poster="<?= $project['image'] ?>>
+                <video class="videoPlayer" autoplay muted loop poster="<?= $project['image'] ?>">
                     <img src="<?= $project['image'] ?>" alt="mockup">
                     <source src="<?= $project['video'] ?>.vp8" type="video/vp8" />
                     <source src="<?= $project['video'] ?>.mp4" type="video/mp4" />
@@ -41,7 +41,7 @@
                 <div class="rectangle-2"></div>
 
                 <div class="video-2">
-                    <video class="videoPlayer" autoplay muted loop poster="<?= $project['image'] ?>>
+                    <video class="videoPlayer" autoplay muted loop poster="<?= $project['image'] ?>">
                         <img src="<?= $project['image'] ?>" alt="mockup">
                         <source src="<?= $project['video'] ?>.vp8" type="video/vp8" />
                         <source src="<?= $project['video'] ?>.mp4" type="video/mp4" />
