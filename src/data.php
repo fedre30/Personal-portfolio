@@ -1,5 +1,6 @@
 <?php
 
+$headtitle = 'Federica Alfano - Creative Full-stack developer';
 $title = 'Federica Alfano';
 $profession = 'Creative Full-stack developer';
 

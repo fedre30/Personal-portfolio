@@ -41,5 +41,5 @@
     <link href="style/reset.css" rel="stylesheet">
     <link rel="stylesheet" href="style/skeleton.css">
     <link rel="stylesheet" href="style/main_mobile.css">
-    <title><?= $title ?></title>
+    <title><?= $headtitle ?></title>
 </head>

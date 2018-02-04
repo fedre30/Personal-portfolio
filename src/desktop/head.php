@@ -42,5 +42,5 @@
     <link rel="stylesheet" href="style/skeleton.css">
     <link rel="stylesheet" href="style/main.css">
     <link rel="icon" type="image/png" href="img/favicon.png" />
-    <title><?= $title ?></title>
+    <title><?= $headtitle ?></title>
 </head>
