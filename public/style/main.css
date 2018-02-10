@@ -34,7 +34,7 @@ a {
   font-weight: 500;
   color: #D0A233;
   transform: translateX(40px);
-  transition: all 0.4s ease;
+  transition: all .4s ease;
   width: 140px;
   top: -9px;
   text-align: right; }
@@ -45,7 +45,7 @@ a {
 .scrollTarget {
   --currentSection: 0;
   margin-top: calc(-100vh * var(--currentSection));
-  transition: all 0.7s ease;
+  transition: all .7s ease;
   overflow: hidden;
   opacity: 1; }
 
@@ -67,11 +67,11 @@ a {
 
 .typewriter {
   overflow: hidden;
-  border-right: 0.15rem solid transparent;
+  border-right: .15rem solid transparent;
   padding-right: 4px;
   white-space: nowrap;
   margin: 0 auto;
-  letter-spacing: 0.15rem;
+  letter-spacing: .15rem;
   animation: typing 2.5s steps(30, end), blink-caret 1s step-end 3; }
 
 @keyframes typing {
@@ -79,15 +79,18 @@ a {
     width: 0; }
   to {
     width: 100%; } }
+
 @keyframes blink-caret {
   from, to {
     border-color: transparent; }
   50% {
     border-color: white; } }
+
 @keyframes professionAppear {
   from {
     opacity: 0;
     transform: translateY(200px); } }
+
 .profession {
   font-family: "Abril Fatface", regular;
   color: #D0A233;
@@ -215,7 +218,7 @@ a {
 
 @-webkit-keyframes wobble-hor-bottom {
   0%,
-100% {
+  100% {
     -webkit-transform: translateX(0%);
     transform: translateX(0%);
     -webkit-transform-origin: 50% 50%;
@@ -234,6 +237,7 @@ a {
     transform: translateX(0%);
     -webkit-transform-origin: 50% 50%;
     transform-origin: 50% 50%; } }
+
 .projects {
   max-height: 300vh; }
 
@@ -245,6 +249,7 @@ a {
     width: 5vw;
     text-align: center;
     animation: rotate-scale-up-diag-1 6s ease infinite; }
+
 @keyframes rotate-scale-up-diag-1 {
   0% {
     transform: scale(1) rotate3d(1, 1, 0, 0deg); }
@@ -492,6 +497,7 @@ a {
     animation-delay: 0s;
     animation-iteration-count: infinite;
     animation-timing-function: ease; }
+
 @keyframes spinning {
   0% {
     transform: rotate(0deg); }
@@ -608,13 +614,12 @@ a {
 @media (max-width: 400px) {
   .subtitle {
     margin: 0; }
-
   .phaseTitle {
     font-size: 2.5vw; }
-
   .phaseParagraph {
     margin-top: 2vh;
     font-size: 2vw; } }
+
 .about {
   width: 100vw;
   height: 100vh; }
@@ -714,5 +719,3 @@ a {
 
 ::-webkit-scrollbar {
   display: none; }
-
-/*# sourceMappingURL=main.css.map */

@@ -41,6 +41,7 @@
         <div class="logo-item"><a href="https://codepen.io/alfanofederica/" target="_blank"><img src="img/codepen.svg" alt=""></a></div>
         <div class="logo-item"><a href="https://www.facebook.com/federica.alfano.18" target="_blank"><img src="img/facebook.svg" alt=""></a></div>
         <div class="logo-item"><a href="https://www.linkedin.com/in/federicaalfano/" target="_blank"><img src="img/linkedin.svg" alt=""></a></div>
+        <div class="logo-item"><a href="https://dribbble.com/alfanofederica" target="_blank"><img src="img/dribbble-logo.svg" alt="dribble logo"></a></div>
         <div class="logo-item"><a href="img/FedericaAlfano_CV.pdf" target="_blank"><img src="img/resume.svg" alt=""></a></div>
     </div>
     <p class="copyright">©Federica Alfano 2018</p>
