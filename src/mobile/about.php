@@ -39,7 +39,6 @@
         <div class="logo-item"><a class="mail_botprotection" data-displayed-id="alfanofederica95" data-id="alfanofederica95+contact" data-server="gmail.com"><img src="img/mail.svg" alt=""></a></div>
         <div class="logo-item"><a href="https://github.com/fedre30" target="_blank"><img src="img/github.svg" alt=""></a></div>
         <div class="logo-item"><a href="https://codepen.io/alfanofederica/" target="_blank"><img src="img/codepen.svg" alt=""></a></div>
-        <div class="logo-item"><a href="https://www.facebook.com/federica.alfano.18" target="_blank"><img src="img/facebook.svg" alt=""></a></div>
         <div class="logo-item"><a href="https://www.linkedin.com/in/federicaalfano/" target="_blank"><img src="img/linkedin.svg" alt=""></a></div>
         <div class="logo-item"><a href="https://dribbble.com/alfanofederica" target="_blank"><img src="img/dribbble-logo.svg" alt="dribble logo"></a></div>
         <div class="logo-item"><a href="img/FedericaAlfano_CV.pdf" target="_blank"><img src="img/resume.svg" alt=""></a></div>
