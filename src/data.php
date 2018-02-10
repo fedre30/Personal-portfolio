@@ -1,8 +1,8 @@
 <?php
 
-$headtitle = 'Federica Alfano - Creative Full-stack developer';
+$headtitle = 'Federica Alfano - Creative Web developer';
 $title = 'Federica Alfano';
-$profession = 'Creative Full-stack developer';
+$profession = 'Creative Web developer';
 
 
 //PROJECTS
