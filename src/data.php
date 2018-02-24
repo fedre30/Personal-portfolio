@@ -175,7 +175,7 @@ $paragraphs = [
             'content' => 'People may define me as a curious "multi-potentialist": I have many passions that I\'d like to
                     combine in one. Any sort of art really thrills me such as cinema, video-making, photography, dance, and most of all
                     music, which has been part of my life since I was such a cutie tiny girl.
-                    At present I can play violin, piano, guitar and ukulele but I mostly enjoy composing songs',
+                    At present I can play violin, piano, guitar and ukulele but I mostly enjoy composing songs.',
         ],
     ],
 
@@ -188,7 +188,7 @@ $paragraphs = [
         ],
         [
             'type' => 'span',
-            'content' => 'it\'s all about language learning',
+            'content' => 'it\'s all about language learning.',
             'class' => 'bold'
         ],
 
