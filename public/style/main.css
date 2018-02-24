@@ -201,6 +201,7 @@ a {
 
 .scrollAction {
   width: 5vw;
+  height: 5vh;
   margin: 0 auto;
   position: absolute;
   bottom: 5vh;

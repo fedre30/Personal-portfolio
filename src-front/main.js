@@ -42,6 +42,7 @@ let sectionIsAnimating = false;
 const dots = document.querySelectorAll('.menu-item');
 const projectTitle = document.querySelector('.projectTitle');
 
+
 function refreshSectionDots(currentSection) {
     for(let i = 0; i < dots.length; i++){
         dots[i].style.background = i === currentSection ? 'linear-gradient(to right, #D0A233, #FFFFFF, #7F8990)' : 'transparent';
@@ -95,7 +96,9 @@ function setCurrentSection(section) {
         triggerSectionAnimations();
         refreshSectionDots(section);
     }
+
 }
+
 
 const lethargy = new Lethargy();
 
@@ -116,6 +119,12 @@ window.addEventListener('wheel', function (e) {
 
 });
 
+const scrollAction = document.querySelector('.scrollAction');
+
+scrollAction.addEventListener('click', function () {
+    setCurrentSection(1);
+});
+
 for(let i = 0; i < dots.length; i++){
     dots[i].addEventListener('click', function () {
         setCurrentSection(i);
@@ -134,6 +143,9 @@ document.addEventListener('keydown', function (e) {
         setCurrentSection(sectionCounter + (isUp ? -1 : 1));
     }
 });
+
+
+
 
 
 
