@@ -49,7 +49,8 @@ $projects = [
         'link' => 'https://invis.io/WYENGG0GQ',
         'linkCatch' => 'See Prototype'
 
-    ]
+    ],
+	
 ];
 
 //WORKFLOW
@@ -210,13 +211,5 @@ $paragraphs = [
             'content' => 'That\'s why logical and computing languages are very challenging to me.',
         ]
     ],
-
-
-    [
-        [
-            'type' => 'text',
-            'content' => 'I’m currently looking for an internship in Paris starting on July 2018.',
-        ]
-    ]
 ];
 
