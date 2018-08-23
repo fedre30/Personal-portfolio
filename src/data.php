@@ -211,5 +211,12 @@ $paragraphs = [
             'content' => 'That\'s why logical and computing languages are very challenging to me.',
         ]
     ],
+
+	[
+		[
+			'type' => 'text',
+			'content' => 'I\'m currently working at Superpitch, Paris',
+		]
+	],
 ];
 
