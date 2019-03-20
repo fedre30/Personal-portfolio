@@ -9,15 +9,15 @@ $profession = 'Creative Web developer';
 
 $projects = [
     [
-        'name' => 'Fanhub',
-        'id' => 'Fanhub',
-        'tags' => ['Team Project', 'Javascript', 'Node.js'],
-        'description' => 'A Fan Films’ streaming Website created during an intensive week at HETIC (Web School).<br>The main purpose of the platform was building a solid community of Fan Films and giving the opportunity to users to upload their own film.<br>I coded some Front-end features in Javascript and the upload film section in Node.JS.',
-        'video' => 'video/fanhub',
+        'name' => 'ExoProd',
+        'id' => 'Exoprod',
+        'tags' => ['Team Project', 'React', 'Webdoc'],
+        'description' => 'ExoProd (Exotic production) is a webdocumentary about unknown instruments all over the world. <br>The main purpose of the platform is discovering new sounds and even experimenting with them though our Studio.<br> Frontend is ont React and an API (on PHP) is available.',
+        'video' => 'video/exoprod',
         'videoId' => 'fH3dwwi6V4w',
-        'image' => 'img/mockup_fanhub.jpg',
+        'image' => 'img/exoprod.png',
         'logoLink' => 'img/github_dark.svg',
-        'link' => 'https://github.com/fedre30/Fanhub',
+        'link' => 'https://github.com/fedre30/exoprod_frontend',
         'linkCatch' => 'See code'
 
     ],
